@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Ali Alfredji]]></title><description><![CDATA[Passionate Web Engineer]]></description><link>https://alialfredji.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 14 Feb 2019 15:44:17 GMT</lastBuildDate><item><title><![CDATA[Gatsby Begins]]></title><description><![CDATA[And so I tried out Gatsby and promptly decided to turn my Wordpress based blog into a static generated website.]]></description><link>https://alialfredji.github.io/2019/gatsby-begins</link><guid isPermaLink="false">https://alialfredji.github.io/2019/gatsby-begins</guid><pubDate>Wed, 02 Oct 2019 23:46:37 GMT</pubDate><content:encoded>&lt;p&gt;And so I tried out &lt;a href=&quot;http://gatsbyjs.org&quot;&gt;Gatsby&lt;/a&gt; and promptly decided to turn
+my &lt;a href=&quot;https://wordpress.org&quot;&gt;Wordpress&lt;/a&gt; based blog into a &lt;strong&gt;static generated website&lt;/strong&gt;.
+And to be honest, this is not the first time.&lt;/p&gt;
+&lt;p&gt;My personal website has gone through a couple of stack changes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2008: Custom CMS (PHP)&lt;/li&gt;
+&lt;li&gt;2014: &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jeckyll&lt;/a&gt; - static website&lt;/li&gt;
+&lt;li&gt;2017: &lt;a href=&quot;https://wordpress.org&quot;&gt;Wordpress&lt;/a&gt; - self hosted, Docker based&lt;/li&gt;
+&lt;li&gt;2019: &lt;a href=&quot;http://gatsbyjs.org&quot;&gt;Gatsby&lt;/a&gt; - static website&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Motivations&lt;/h2&gt;
+&lt;p&gt;Well… in a word… &lt;strong&gt;memory&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;I used to host my &lt;em&gt;Wordpress&lt;/em&gt; blog as a &lt;a href=&quot;https://docker.com&quot;&gt;Docker&lt;/a&gt; project on a small
+&lt;a href=&quot;https://digitalocean.com&quot;&gt;DigitalOcean&lt;/a&gt; droplet and while trying to deploy some
+new stuff using &lt;a href=&quot;https://caprover.com&quot;&gt;Captain Rover&lt;/a&gt; I was running out of available memory.
+Wordpress had to go.&lt;/p&gt;
+&lt;p&gt;On top of that &lt;strong&gt;I was also tired of Wordpress&lt;/strong&gt;. I recently read a
+&lt;a href=&quot;https://sendcheckit.com/blog/why-you-should-put-your-content-on-medium-and-your-own-domain&quot;&gt;nice blog&lt;/a&gt;
+post about leveraging &lt;a href=&quot;https://medium.com&quot;&gt;Medium&lt;/a&gt; to bring traffic to your owned
+contents using the &lt;a href=&quot;https://medium.com/p/import&quot;&gt;import story&lt;/a&gt; function.&lt;/p&gt;
+&lt;p&gt;Long story short Wordpress was performing horribly when it comes to the Medium’s import
+function, and I didn’t really wanted to spend too much reformatting each article.&lt;/p&gt;
+&lt;h2&gt;First Impressions&lt;/h2&gt;
+&lt;p&gt;Gatsby is heavily based on &lt;a href=&quot;https://reactjs.org/&quot;&gt;React&lt;/a&gt; and &lt;a href=&quot;https://graphql.org/&quot;&gt;GraphQL&lt;/a&gt;,
+two tools that I like very much. It feels quite easy to jump into a theme that I don’t know
+and tweak it to my liking.&lt;/p&gt;
+&lt;p&gt;The official documentation sucks just a little. I felt confused in moving my first steps.
+Probably they could put some more love into a comprehensive “getting started” that let you
+build your first page with some customization.&lt;/p&gt;
+&lt;p&gt;The &lt;a href=&quot;https://www.gatsbyjs.org/starters/?v=2&quot;&gt;starters&lt;/a&gt; are a very nice feature. I could choose
+a theme that I like, and extend it. More or less the way I am used to do with Docker.&lt;/p&gt;
+&lt;p&gt;What to say about the resulting performances? I ran a &lt;a href=&quot;https://developers.google.com/web/tools/lighthouse/&quot;&gt;lighthouse&lt;/a&gt; test and got 100% on everithing :-)&lt;/p&gt;
+&lt;h2&gt;A Lot of Work Ahead&lt;/h2&gt;
+&lt;p&gt;As with every change, now I must re-import all my old posts. Damn it!&lt;/p&gt;
+&lt;p&gt;Luckily most of them were already written in &lt;a href=&quot;https://en.wikipedia.org/wiki/Markdown&quot;&gt;Markdown&lt;/a&gt;
+so it should be quite of a quick effort.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[React Styleguidist]]></title><description><![CDATA[How to run "react-styleguidist" with "react-scripts-rewired".]]></description><link>https://alialfredji.github.io/2018/react-styleguidist-with-react-scripts-rewired</link><guid isPermaLink="false">https://alialfredji.github.io/2018/react-styleguidist-with-react-scripts-rewired</guid><pubDate>Thu, 22 Nov 2018 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;&lt;a href=&quot;https://react-styleguidist.js.org&quot;&gt;react-styleguidist&lt;/a&gt; tries to load the default Webpack configuration that is provided by &lt;a href=&quot;https://facebook.github.io/create-react-app/&quot;&gt;create-react-app&lt;/a&gt;. That works just like magic out of the box.&lt;/p&gt;
+&lt;p&gt;But if you are using &lt;a href=&quot;https://www.npmjs.com/package/react-scripts-rewired&quot;&gt;react-scripts-rewired&lt;/a&gt; it will not work out of the box.&lt;/p&gt;
+&lt;p&gt;The trick is to point the styleguide to the right webpack configuration:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;module.exports = {
+    webpackConfig: require(&amp;#39;react-scripts-rewired/config/webpack.config.dev.extend&amp;#39;),
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Best Practices for a Good Team Experience]]></title><description><![CDATA[Few tricks I've learned that makes collaboration easier.]]></description><link>https://alialfredji.github.io/2018/best-practices-for-good-team-experience</link><guid isPermaLink="false">https://alialfredji.github.io/2018/best-practices-for-good-team-experience</guid><pubDate>Sat, 19 May 2018 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;Through my years in engineering I saw a couple of project succeed and some other fail. I’ve been exposed to many best practices: waterfall(s), agile, chaos, git. You name it, we tried it out.&lt;/p&gt;
+&lt;p&gt;It’s been a while since I’ve started to think a &lt;strong&gt;set of simple practices that might help a team to cooperate better&lt;/strong&gt;, to reduce the occasions where we cross each other paths, reduce merge conflicts in Git and generally reduce the fuckups we do.&lt;/p&gt;
+&lt;p&gt;In this article I’m going to note those ideas down. Of course I aim to become a best selling author and give away millions of copies of the book that I will write at the end. All my posts share the same humble ambition!&lt;/p&gt;
+&lt;h2&gt;Test in Isolation&lt;/h2&gt;
+&lt;h3&gt;Problem:&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;A common issue that I’ve experienced many times is the introduction of new &lt;strong&gt;environment variables&lt;/strong&gt; that are defined in files that are &lt;em&gt;gitignored&lt;/em&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Common causes are new external services being introduced, and for which you need some info like API tokens or passwords. Emails sending providers are often a culprit.&lt;/p&gt;
+&lt;h3&gt;Solution:&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Clone your working branch in a temporary folder and run it from there. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This way you won’t rely on your local development environment, but you will just simulate a “new developer experience”. If it doesn’t work it means that you have some local environment definitions that you missed to add to the project´s &lt;code class=&quot;language-text&quot;&gt;.env&lt;/code&gt; or you missed to document in a &lt;strong&gt;changelog&lt;/strong&gt; file. &lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Keep a Changelog file&lt;/h2&gt;
+&lt;h3&gt;Problem:&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Often out git history is not as clear as we would like it to be, and it becomes difficult to understand what had changed at a big picture level.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3&gt;Solution:&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Start to maintain a simple &lt;code class=&quot;language-text&quot;&gt;CHANGELOG.md&lt;/code&gt; in the root of your project.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The main goal is to track configuration changes or new dependencies that you have introduced and that your collaborators need to install after they merge in your changes.&lt;/p&gt;
+&lt;p&gt;There is no need of a strict format, the goal is to share high level info:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;## 2018-05-18 - Introduced Mailgun Service
+
+&amp;gt; @alialfredji  
+&amp;gt; Issues: #7, #14
+
+Three new environment variables are required by the webapp service:
+
+    MAIL_HOST=xxx
+    MAIL_USER=xxx
+    MAIL_PASSWORD=xxx
+
+Although those variable are already set in the _docker-compose_ definition,
+you might need to add them into the `services/webapp/.env.local` if you are
+running the app from local node.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Also this log should not explain code changes, for that we already have git. The goal is to share the &lt;strong&gt;big picture&lt;/strong&gt; and how the codebase is evolving a whole.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2&gt;Try/Catch a lot&lt;/h2&gt;
+&lt;p&gt;Here is come a best practice about Javascript code. In modern Javascript we extensively use &lt;code class=&quot;language-text&quot;&gt;Promises&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;async/await&lt;/code&gt; to get ourselves out of the &lt;strong&gt;callbacks hell&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;But this often leads us to another foe:&lt;br&gt;
+the &lt;strong&gt;UnhandledPromiseRejectionWarning&lt;/strong&gt; error!&lt;/p&gt;
+&lt;h3&gt;Problem:&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// unhandled promise
+ExpressApp.get(&amp;#39;/&amp;#39;, (req, res) =&amp;gt; {
+  fetch(&amp;#39;http://foo.com&amp;#39;)
+    .then(r =&amp;gt; r.json())
+    .then(data =&amp;gt; res.send(data)
+})
+
+// uncatched exception
+ExpressApp.get(&amp;#39;/&amp;#39;, async (req, res) =&amp;gt; {
+  const r = await fetch(&amp;#39;http://foo.com&amp;#39;)
+  const data = await r.json()
+  res.send(data)
+})&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Solution:&lt;/h3&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// unhandled promise
+ExpressApp.get(&amp;#39;/&amp;#39;, (req, res) =&amp;gt; {
+  fetch(&amp;#39;http://foo.com&amp;#39;)
+    .then(r =&amp;gt; r.json())
+    .then(data =&amp;gt; res.send(data)
+    .catch(err =&amp;gt; res.status(500).send(err.message)) // &amp;lt;- catch!
+})
+
+// uncatched exception
+ExpressApp.get(&amp;#39;/&amp;#39;, async (req, res) =&amp;gt; {
+  try {
+    const r = await fetch(&amp;#39;http://foo.com&amp;#39;)
+    const data = await r.json()
+    res.send(data)
+  catch (err) { // &amp;lt;- catch!
+    res.status(500).send(err.message)
+  }
+})&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2&gt;Docker as Developer First Environment&lt;/h2&gt;
+&lt;h3&gt;Problem:&lt;/h3&gt;
+&lt;p&gt;You receive a Docker project and the documentation claims &lt;code class=&quot;language-text&quot;&gt;docker-compose up&lt;/code&gt; will do the trick, you try and it doesn’t. You ask your colleagues and they produce a list of environment variables, build-steps and magic tricks that you need in order to actually begin to proactively code on the solution.&lt;/p&gt;
+&lt;p&gt;How many times do you experience this frustrating situation?&lt;/p&gt;
+&lt;h3&gt;Solution:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Your &lt;code class=&quot;language-text&quot;&gt;docker-compose.yaml&lt;/code&gt; should use only existing standard images (like Node or Wordpress) and you link local source folders as &lt;em&gt;volumes&lt;/em&gt; in it.&lt;/li&gt;
+&lt;li&gt;Your &lt;code class=&quot;language-text&quot;&gt;docker-compose.yaml&lt;/code&gt; should use version &lt;code class=&quot;language-text&quot;&gt;2.1&lt;/code&gt; so that you can specify any piece of information using environment variables with defaults for development purpose: &lt;code class=&quot;language-text&quot;&gt;PORT=${PORT:-8080}&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Your system should use &lt;strong&gt;seed scripts&lt;/strong&gt; if the application needs a particular state to be in when it boots. MySQL and Postgres offers a very simple way to seed and empty database. Files can be seeded with simple bash commands that uploads local zip archives into initially empty volumes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reset your application state as often as possible&lt;/strong&gt;. This is a good test to run at least once a day. Destroy containers, remove volumes and networks. Basically restore your Docker install to factory settings. Then clone your project in a temporary folder and try to boot it. Does it still work? Keep it working this way.&lt;/li&gt;
+&lt;li&gt;Use &lt;code class=&quot;language-text&quot;&gt;mem_limit&lt;/code&gt; like there was no tomorrow. Give your services the least amount of memory you can. Find the lower limit early on in your development project. This will help you spotting memory issues problems that will go unnoticed for long time if you give Docker the whole 16Gb of ram that is available to your Mac.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2&gt;Docker as Production Ready Environment&lt;/h2&gt;
+&lt;h2&gt;Problem:&lt;/h2&gt;
+&lt;p&gt;Your development setup is now stable but you need to push it to production. Hence you need to override variables. Luckily you followed the principles listed in the previous step and have all optional parameters defaulted to development values in your &lt;code class=&quot;language-text&quot;&gt;docker-compose.yml&lt;/code&gt;.&lt;/p&gt;
+&lt;h2&gt;Solution:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Use &lt;code class=&quot;language-text&quot;&gt;.env&lt;/code&gt; file to override the configuration with production values, gitignore that file so it won’t affect your development setup, nor your repo.&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Optional Parameter in AWS CloudFormation Stack YAML]]></title><link>https://alialfredji.github.io/2018/optional-parameter-aws-cloudformation-stack-yaml</link><guid isPermaLink="false">https://alialfredji.github.io/2018/optional-parameter-aws-cloudformation-stack-yaml</guid><pubDate>Mon, 26 Mar 2018 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;The following YAML CloudFormation stack creates an EBS volume returning its reference for further usage in a higher level template.&lt;/p&gt;
+&lt;p&gt;I’ve chosen to use the value “false” for &lt;em&gt;SnapshotId&lt;/em&gt; when I have no desire to restore from a previously created snapshot.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Description: create an EBS data volume
+
+Parameters:
+    DiskSize:
+        Description: Disk size in GB
+        Type: Number
+        Default: 10
+
+    SnapshotId:
+        Description: Snapshot from where to restore the disk
+        Type: String
+        Default: false
+
+Conditions:
+    IsNewDisk: !Equals [ !Ref SnapshotId, false ]
+
+Resources:
+    EBSVolume:
+        Type: AWS::EC2::Volume
+        Properties:
+            VolumeType: gp2
+            Size: !Ref DiskSize
+            SnapshotId: 
+                Fn::If:
+                - IsNewDisk
+                - Ref: AWS::NoValue
+                - Ref: SnapshotId
+            AvailabilityZone: !Select [ 0, !GetAZs ]
+
+Outputs:
+    EBSVolume:
+        Value: !Ref EBSVolume&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The two relevant pieces of information are &lt;code class=&quot;language-text&quot;&gt;Fn::If&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;AWS::NoValue&lt;/code&gt;.
+And it was not easy to find out about them in the documentation.&lt;/p&gt;
+&lt;p&gt;I found out about the &lt;code class=&quot;language-text&quot;&gt;AWS::NoValue&lt;/code&gt; from &lt;a href=&quot;https://cloudonaut.io/optional-parameter-in-cloudformation/&quot;&gt;this post&lt;/a&gt;, but the syntax refers to JSON and I am using YAML. I’m no expert in that so it has been no easy to put together the condition with nested functions.&lt;/p&gt;
+&lt;p&gt;I have finally found the last piece of relevant information in &lt;a href=&quot;https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/pseudo-parameter-reference.html&quot;&gt;this AWS documentation page&lt;/a&gt; which is not about conditionals, but just about pseudo parameters.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Make it Parallel]]></title><description><![CDATA[How to run consume a queue with multiple independent workers in Postgres, and survive!]]></description><link>https://alialfredji.github.io/2018/make-it-parallel</link><guid isPermaLink="false">https://alialfredji.github.io/2018/make-it-parallel</guid><pubDate>Fri, 02 Feb 2018 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;The first version of &lt;a href=&quot;https://fetchq.com/&quot;&gt;my queue system&lt;/a&gt; was very simple, in the end it proved to be too simple for a real life scenario.&lt;/p&gt;
+&lt;p&gt;I knew I couldn’t use queue / messaging tools like RabbitMQ because of my requirements (uniqueness, time based) so after some googling I resolved to &lt;em&gt;DIY&lt;/em&gt; and I choosed &lt;em&gt;PostgreSQL&lt;/em&gt; as database and centralized queue management.&lt;/p&gt;
+&lt;p&gt;The general idea it was to query a table to get “what to do next?“.&lt;/p&gt;
+&lt;p&gt;Here is the simple schema:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;taskId | taskSubject | nextIteration
+------------------------------------
+1      | buy milk    | today
+2      | do laundry  | tomorrow&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And the simple query to fetch the task was:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;SELECT * FROM my_queue
+WHERE nextIteration &amp;lt; NOW()
+ORDER BY nextIteration ASC&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Beautiful in it’s own simplicity, isn’t it? When a &lt;em&gt;worker&lt;/em&gt; resolves a task it just need to update the &lt;code class=&quot;language-text&quot;&gt;nextItaration&lt;/code&gt; to the preferred date. Each job should decide how long to wait until next execution.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I ran my tests and I was happy.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Do I need to mention here that my “tests” were running on my local machine, with just one consumer to the queue? Yes, I guess it’s an important part of this story. My tests were successful - or so I believed back then - and I did spend next few days implementing the actual logic of the workers.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;And then it came the &lt;strong&gt;deployment day&lt;/strong&gt;. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;My startup received quite a good deal of credits from &lt;em&gt;AWS&lt;/em&gt; so I was thrilled to &lt;strong&gt;scale up&lt;/strong&gt; my system and unleash the &lt;strong&gt;true power of parallel computing&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Oh boy, &lt;strong&gt;I was so young!&lt;/strong&gt;&lt;br&gt;
+— 6 months ago&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;My local  testing was giving me a throughput of ~20 tasks/sec with one &lt;em&gt;consumer machine&lt;/em&gt; running the workers. &lt;/p&gt;
+&lt;p&gt;Of course &lt;strong&gt;my scaling expectations were quite linear&lt;/strong&gt;: 2 machine means 40 t/s, 4 machines 80 t/s, and so forth… realistic uh? Somewhere deep inside I knew that linearity was just a little too much of an expectation but I rate myself a genius, so why not? &lt;/p&gt;
+&lt;p&gt;Without further hesitation I hit the &lt;em&gt;autoscaling group&lt;/em&gt; accelerator and displaced 10 consumer machines. My chest was exploding with early shouts of joy for 200 tasks per seconds were just few seconds away…&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You need to know that this queue system is meant to handle something around 2-3 billions tasks, probably &lt;strong&gt;~120 millions tasks need to run daily&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;In a day we have 86400 seconds and that calls for &lt;strong&gt;near 1900 tasks per second throughput need&lt;/strong&gt;. Which calls for something around 70 consumers machines if they can handle 20 t/s. That’s the number that made me smile when I saw my local test results.&lt;/p&gt;
+&lt;p&gt;Welcome to my little big data adventure!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bip! bip! bip! Suddenly I receive the &lt;em&gt;“deployment succeeded”&lt;/em&gt; notification (1) and I rushed to my terminal to get the throughput estimate and… NOOOOOOOOO!!!!!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;still stuck at 20 tasks per second&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;How comes? 10 machines woking at full speed, an RDS database with enough power in it to serve NASA for their next manned mission to Mars… and it still producing the very same results of the single development machine? That was bad news.&lt;/p&gt;
+&lt;p&gt;I dug deep into the logs produced by each machine and a terrible pattern slowly begun to take shape before my eyes: &lt;strong&gt;every task was given out to every consumer machine&lt;/strong&gt;. My cluster was doing parallel computing all right, but it was just doing the same job in parallel for 10 times. Far away from what I had in mind.&lt;/p&gt;
+&lt;p&gt;When I recovered from the shock I realized it was a reasonable simple problem of concurrent access to the same task. I had actually prepared no mechanism to lock one task once it’s been picked up.&lt;/p&gt;
+&lt;p&gt;A creative genius like myself doesn’t have to wait much for his smart-ass brain to come up with a decent solution: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When a consumer picks up a task it will lock the task by setting &lt;code class=&quot;language-text&quot;&gt;nextIteration&lt;/code&gt; some minutes in the future.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;task = (
+  SELECT * FROM my_queue
+  WHERE nextIteration &amp;lt; NOW()
+  ORDER BY nextIteration ASC
+)
+
+UPDATE my_quee 
+SET nextIteration = NOW() + &amp;#39;5 minutes&amp;#39;
+WHERE id = task.id&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This way I was getting two birds with one stone:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bird number one, I could lock the queue so no tasks will be picked by two machines because of &lt;code class=&quot;language-text&quot;&gt;WHERE nextIteration &amp;lt; NOW()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;bird number two, if a worked hit an error the task will be picked up by another worker few time later. I was sure I had a self healing queue in my hands. Nobel prize here I come!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Stunned by my brilliant solution I hit the red button again and deployed. This time I was a little bit more cautious in my expectations, but still it should work, shouldn’t it? Simple idea, simple query… what could possibly go&lt;/p&gt;
+&lt;p&gt;Bip! bip! bip! It’s ready and it’s live. One rushed terminal typing minute later I got my new throughput result: ~40 t/s. Whaaat? Better than before but &lt;strong&gt;still far away from the 200 t/s need&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This was a bad moment in my life. I felt like the problem couldn’t be solved. If I wasn’t able, who was? That stupid Postgres must not be the right tool. We must take our startup down because it can not be done. Google? Facebook? They are surely cheating with their data… Somehow… Maybe not… Maybe somebody else faced the same issue… Maybe…&lt;/p&gt;
+&lt;p&gt;And I finally begun doing what I should have been doing since the beginning: I hit “google” on my keyboard and started to research of concurrent updates in Postgres. Yes buddy, the only safe assumption one can make about a technical problem is that &lt;strong&gt;someone else already faced it and solved it&lt;/strong&gt;. No matter what problem. Sure there will be exceptions to this rule but I challenge you to come to me with an example!&lt;/p&gt;
+&lt;p&gt;To search for a solution that you don’t know is tricky. Way more tricky than just throw code to a solution like I did so far. It requires more creativity than coding and a very open mind as you have to turn, shift and adapt your search keywords all along the way, as your understanding of the problem slowly get better and better.&lt;/p&gt;
+&lt;p&gt;It took few days for me to find the solution to this problem. It is not a difficult solution, it was difficult to me to get to find the proper keywords that got me to to proper Stackoverflow thread with the proper answer. The most difficult part was to recognise the correct answer.&lt;/p&gt;
+&lt;p&gt;Here it is, it turned out I was very close to the solution and that my smart-ass brain is not that bad after all. I just didn’t know enough about the tool I was using - Postgres - which happens to be an amazing tool with amazing features. The first feature that I got to learn in my &lt;strong&gt;little big data adventure&lt;/strong&gt; is &lt;code class=&quot;language-text&quot;&gt;SELECT ... FOR UPDATE&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;UPDATE my_queue 
+SET nextIteration = NOW() + &amp;#39;5 minutes&amp;#39;
+WHERE id IN (
+  SELECT id FROM my_queue
+  WHERE nextIteration &amp;lt; NOW()
+  ORDER BY nextIteration ASC
+  LIMIT 1
+  FOR UPDATE
+);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Can you see it is just the combination of my original two queries? The concurrency problem I faced during my second test was due to the fact that by the time Postgres executes the &lt;code class=&quot;language-text&quot;&gt;UPDATE&lt;/code&gt; query, some other consumer already manage to slip in it’s &lt;code class=&quot;language-text&quot;&gt;SELECT&lt;/code&gt; request.&lt;/p&gt;
+&lt;p&gt;By combining the &lt;code class=&quot;language-text&quot;&gt;SELECT/UPDATE&lt;/code&gt; in one single request, and locking the table’s row with the &lt;code class=&quot;language-text&quot;&gt;FOR UPDATE&lt;/code&gt; statement I leverage Postgres smart-ass geniuses to handle the concurrent access problem for me.&lt;/p&gt;
+&lt;p&gt;Well, that is really it for this story. I have more to tell as I didn’t quite get the life lesson this first time. My brain is quite slow in that respect.&lt;/p&gt;
+&lt;p&gt;And for the life lesson, I can squeeze it in a simple sentence:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Learn the tools you’re using&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I was using Postgres just as a simple data repository. I was doing at application level what many smart engineers already did in Postgres. &lt;/p&gt;
+&lt;p&gt;Cm’on! We have amazing open source tools that we can use to improve our work, our effectiveness and the value that we produce. Let’s not be so arrogant (as I was) as not to respect their creators and read what they have done.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;(1) the notification from AWS is for storytelling purpose only. They have no such thing. I wish they had! Somebody should tell ‘em we want it!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[How to optimize Postgres for SELECT COUNT(*) on massive tables]]></title><description><![CDATA[Short answer: "you can't". Long and more complex answer: "you can play with indexes".]]></description><link>https://alialfredji.github.io/2017/optimize-select-count-postgres</link><guid isPermaLink="false">https://alialfredji.github.io/2017/optimize-select-count-postgres</guid><pubDate>Sun, 03 Dec 2017 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;The first version of &lt;a href=&quot;https://fetchq.com/&quot;&gt;my queue system&lt;/a&gt; was very simple, in the end it proved to be too simple for a real life scenario.&lt;/p&gt;
+&lt;p&gt;I knew I couldn’t use queue / messaging tools like RabbitMQ because of my requirements (uniqueness, time based) so after some googling I resolved to &lt;em&gt;DIY&lt;/em&gt; and I choosed &lt;em&gt;PostgreSQL&lt;/em&gt; as database and centralized queue management.&lt;/p&gt;
+&lt;p&gt;The general idea it was to query a table to get “what to do next?“.&lt;/p&gt;
+&lt;p&gt;Here is the simple schema:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;taskId | taskSubject | nextIteration
+------------------------------------
+1      | buy milk    | today
+2      | do laundry  | tomorrow&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And the simple query to fetch the task was:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;SELECT * FROM my_queue
+WHERE nextIteration &amp;lt; NOW()
+ORDER BY nextIteration ASC&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Beautiful in it’s own simplicity, isn’t it? When a &lt;em&gt;worker&lt;/em&gt; resolves a task it just need to update the &lt;code class=&quot;language-text&quot;&gt;nextItaration&lt;/code&gt; to the preferred date. Each job should decide how long to wait until next execution.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I ran my tests and I was happy.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Do I need to mention here that my “tests” were running on my local machine, with just one consumer to the queue? Yes, I guess it’s an important part of this story. My tests were successful - or so I believed back then - and I did spend next few days implementing the actual logic of the workers.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;And then it came the &lt;strong&gt;deployment day&lt;/strong&gt;. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;My startup received quite a good deal of credits from &lt;em&gt;AWS&lt;/em&gt; so I was thrilled to &lt;strong&gt;scale up&lt;/strong&gt; my system and unleash the &lt;strong&gt;true power of parallel computing&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Oh boy, &lt;strong&gt;I was so young!&lt;/strong&gt;&lt;br&gt;
+— 6 months ago&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;My local  testing was giving me a throughput of ~20 tasks/sec with one &lt;em&gt;consumer machine&lt;/em&gt; running the workers. &lt;/p&gt;
+&lt;p&gt;Of course &lt;strong&gt;my scaling expectations were quite linear&lt;/strong&gt;: 2 machine means 40 t/s, 4 machines 80 t/s, and so forth… realistic uh? Somewhere deep inside I knew that linearity was just a little too much of an expectation but I rate myself a genius, so why not? &lt;/p&gt;
+&lt;p&gt;Without further hesitation I hit the &lt;em&gt;autoscaling group&lt;/em&gt; accelerator and displaced 10 consumer machines. My chest was exploding with early shouts of joy for 200 tasks per seconds were just few seconds away…&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You need to know that this queue system is meant to handle something around 2-3 billions tasks, probably &lt;strong&gt;~120 millions tasks need to run daily&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;In a day we have 86400 seconds and that calls for &lt;strong&gt;near 1900 tasks per second throughput need&lt;/strong&gt;. Which calls for something around 70 consumers machines if they can handle 20 t/s. That’s the number that made me smile when I saw my local test results.&lt;/p&gt;
+&lt;p&gt;Welcome to my little big data adventure!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Bip! bip! bip! Suddenly I receive the &lt;em&gt;“deployment succeeded”&lt;/em&gt; notification (1) and I rushed to my terminal to get the throughput estimate and… NOOOOOOOOO!!!!!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;still stuck at 20 tasks per second&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;How comes? 10 machines woking at full speed, an RDS database with enough power in it to serve NASA for their next manned mission to Mars… and it still producing the very same results of the single development machine? That was bad news.&lt;/p&gt;
+&lt;p&gt;I dug deep into the logs produced by each machine and a terrible pattern slowly begun to take shape before my eyes: &lt;strong&gt;every task was given out to every consumer machine&lt;/strong&gt;. My cluster was doing parallel computing all right, but it was just doing the same job in parallel for 10 times. Far away from what I had in mind.&lt;/p&gt;
+&lt;p&gt;When I recovered from the shock I realized it was a reasonable simple problem of concurrent access to the same task. I had actually prepared no mechanism to lock one task once it’s been picked up.&lt;/p&gt;
+&lt;p&gt;A creative genius like myself doesn’t have to wait much for his smart-ass brain to come up with a decent solution: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When a consumer picks up a task it will lock the task by setting &lt;code class=&quot;language-text&quot;&gt;nextIteration&lt;/code&gt; some minutes in the future.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;task = (
+  SELECT * FROM my_queue
+  WHERE nextIteration &amp;lt; NOW()
+  ORDER BY nextIteration ASC
+)
+
+UPDATE my_quee 
+SET nextIteration = NOW() + &amp;#39;5 minutes&amp;#39;
+WHERE id = task.id&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This way I was getting two birds with one stone:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;bird number one, I could lock the queue so no tasks will be picked by two machines because of &lt;code class=&quot;language-text&quot;&gt;WHERE nextIteration &amp;lt; NOW()&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;bird number two, if a worked hit an error the task will be picked up by another worker few time later. I was sure I had a self healing queue in my hands. Nobel prize here I come!&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Stunned by my brilliant solution I hit the red button again and deployed. This time I was a little bit more cautious in my expectations, but still it should work, shouldn’t it? Simple idea, simple query… what could possibly go&lt;/p&gt;
+&lt;p&gt;Bip! bip! bip! It’s ready and it’s live. One rushed terminal typing minute later I got my new throughput result: ~40 t/s. Whaaat? Better than before but &lt;strong&gt;still far away from the 200 t/s need&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;This was a bad moment in my life. I felt like the problem couldn’t be solved. If I wasn’t able, who was? That stupid Postgres must not be the right tool. We must take our startup down because it can not be done. Google? Facebook? They are surely cheating with their data… Somehow… Maybe not… Maybe somebody else faced the same issue… Maybe…&lt;/p&gt;
+&lt;p&gt;And I finally begun doing what I should have been doing since the beginning: I hit “google” on my keyboard and started to research of concurrent updates in Postgres. Yes buddy, the only safe assumption one can make about a technical problem is that &lt;strong&gt;someone else already faced it and solved it&lt;/strong&gt;. No matter what problem. Sure there will be exceptions to this rule but I challenge you to come to me with an example!&lt;/p&gt;
+&lt;p&gt;To search for a solution that you don’t know is tricky. Way more tricky than just throw code to a solution like I did so far. It requires more creativity than coding and a very open mind as you have to turn, shift and adapt your search keywords all along the way, as your understanding of the problem slowly get better and better.&lt;/p&gt;
+&lt;p&gt;It took few days for me to find the solution to this problem. It is not a difficult solution, it was difficult to me to get to find the proper keywords that got me to to proper Stackoverflow thread with the proper answer. The most difficult part was to recognise the correct answer.&lt;/p&gt;
+&lt;p&gt;Here it is, it turned out I was very close to the solution and that my smart-ass brain is not that bad after all. I just didn’t know enough about the tool I was using - Postgres - which happens to be an amazing tool with amazing features. The first feature that I got to learn in my &lt;strong&gt;little big data adventure&lt;/strong&gt; is &lt;code class=&quot;language-text&quot;&gt;SELECT ... FOR UPDATE&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;UPDATE my_queue 
+SET nextIteration = NOW() + &amp;#39;5 minutes&amp;#39;
+WHERE id IN (
+  SELECT id FROM my_queue
+  WHERE nextIteration &amp;lt; NOW()
+  ORDER BY nextIteration ASC
+  LIMIT 1
+  FOR UPDATE
+);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Can you see it is just the combination of my original two queries? The concurrency problem I faced during my second test was due to the fact that by the time Postgres executes the &lt;code class=&quot;language-text&quot;&gt;UPDATE&lt;/code&gt; query, some other consumer already manage to slip in it’s &lt;code class=&quot;language-text&quot;&gt;SELECT&lt;/code&gt; request.&lt;/p&gt;
+&lt;p&gt;By combining the &lt;code class=&quot;language-text&quot;&gt;SELECT/UPDATE&lt;/code&gt; in one single request, and locking the table’s row with the &lt;code class=&quot;language-text&quot;&gt;FOR UPDATE&lt;/code&gt; statement I leverage Postgres smart-ass geniuses to handle the concurrent access problem for me.&lt;/p&gt;
+&lt;p&gt;Well, that is really it for this story. I have more to tell as I didn’t quite get the life lesson this first time. My brain is quite slow in that respect.&lt;/p&gt;
+&lt;p&gt;And for the life lesson, I can squeeze it in a simple sentence:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Learn the tools you’re using&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I was using Postgres just as a simple data repository. I was doing at application level what many smart engineers already did in Postgres. &lt;/p&gt;
+&lt;p&gt;Cm’on! We have amazing open source tools that we can use to improve our work, our effectiveness and the value that we produce. Let’s not be so arrogant (as I was) as not to respect their creators and read what they have done.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;(1) the notification from AWS is for storytelling purpose only. They have no such thing. I wish they had! Somebody should tell ‘em we want it!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[WP Admin proxy for NGINX]]></title><description><![CDATA[How to proxy wp-admin in a headless wordpress setup.]]></description><link>https://alialfredji.github.io/2017/wp-admin-proxy-nginx</link><guid isPermaLink="false">https://alialfredji.github.io/2017/wp-admin-proxy-nginx</guid><pubDate>Sat, 19 Aug 2017 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;At my company we are experimenting quite a lot with &lt;strong&gt;headless WordPress websites&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In short we use WordPress as content editor tool but then we set the theme to output &lt;em&gt;JSON&lt;/em&gt; and we build a &lt;em&gt;PWA&lt;/em&gt; (Progressive Web Application) as frontend.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Out stack is composed as follow:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Wordpress for backend&lt;/li&gt;
+&lt;li&gt;ExpressJS / ReactJS for the PWA&lt;/li&gt;
+&lt;li&gt;NGiNX as frontend facing application&lt;/li&gt;
+&lt;li&gt;Docker to harness them together&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is a short snippet out of our &lt;em&gt;NGiNX&lt;/em&gt; configuration that serves as reverse proxy so we can let our customers access the WP admin page as they are used to do in the ancient times of simple Wordpress sites. I wouldn’t say it’s a difficult piece of config but it took some time for me to google it out of the web.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;location ~ /wp-(admin|login|content|includes) {
+  proxy_set_header        Host $host;
+  proxy_set_header        X-Real-IP $remote_addr;
+  proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header        X-Forwarded-Proto $scheme;
+  proxy_pass http://wordpress;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Do you work with Headless Wordpress as well? What do you think?&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Apple - Security for travellers sucks]]></title><description><![CDATA[Did you know that you can't print any recovery code for your AppleID account? The more you protect it, the more is likely you loose control over it. And do you travel a lot? Then you'd better read this!]]></description><link>https://alialfredji.github.io/2017/apple-security-travellers-sucks</link><guid isPermaLink="false">https://alialfredji.github.io/2017/apple-security-travellers-sucks</guid><pubDate>Thu, 06 Apr 2017 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;In two days Michele and I are going to spend a week in Las Vegas as bullet proof plan to prevent our middle age crisis. We don’t know if it’s going to work but we both agree it’s worth trying :-)&lt;/p&gt;
+&lt;p&gt;But that’s not the point, not entirely anyway. &lt;a href=&quot;https://medium.freecodecamp.com/ill-never-bring-my-phone-on-an-international-flight-again-neither-should-you-e9289cde0e5f&quot;&gt;Did you hear about &lt;strong&gt;US Custom and Border Protection seizing your phone&lt;/strong&gt; and sucking from it your entire digital identity?&lt;/a&gt; (which is made of stuff like emails, Facebook activity and other social data)&lt;/p&gt;
+&lt;p&gt;Here is an &lt;a href=&quot;https://www.wired.com/2017/02/guide-getting-past-customs-digital-privacy-intact/&quot;&gt;article that suggest you protect your privacy&lt;/a&gt;, the currency of the future, from being stolen or placed under unrestricted control. Take a good read now!&lt;/p&gt;
+&lt;p&gt;Because of this I wrote a checklist of &lt;strong&gt;what’s on my phone and how to protect it&lt;/strong&gt;. I don’t really need to create separated travel kits because I’m just going to Las Vegas once, but I am really considering to clean up my phone during the flight.&lt;/p&gt;
+&lt;h2&gt;Two Factor Authentication&lt;/h2&gt;
+&lt;p&gt;First of all I made sure I have enabled &lt;a href=&quot;https://en.wikipedia.org/wiki/Multi-factor_authentication&quot;&gt;Two Factor Authentication&lt;/a&gt; on all my critical services:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Google Mail&lt;/li&gt;
+&lt;li&gt;Facebook&lt;/li&gt;
+&lt;li&gt;Twitter&lt;/li&gt;
+&lt;li&gt;Instagram&lt;/li&gt;
+&lt;li&gt;Dropbox&lt;/li&gt;
+&lt;li&gt;AppleID&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In addition I &lt;strong&gt;saved all the recovery codes&lt;/strong&gt; into a file and I placed that file in my Dropbox account. At that point I printed Dropbox’s recovery code (without any label nor explanation attached to it) and placed in my phone case. Another copy of it is in my luggage and I am considering just memorizing it.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;That security code is now &lt;strong&gt;the single key to unlock my entire digital identity&lt;/strong&gt;, if used together with the proper username and password combination.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So far so good, isn’t it? Well no, there is Apple of course!&lt;/p&gt;
+&lt;h2&gt;Think different (yeah, Apple does)&lt;/h2&gt;
+&lt;p&gt;Of course Apple thinks different, &lt;strong&gt;Apple doesn’t provide any recovery code&lt;/strong&gt; for you to print and use… I searched Google for that code unsuccessfully. Nothing, nada. &lt;/p&gt;
+&lt;p&gt;The only &lt;a href=&quot;https://support.apple.com/en-ie/HT204915&quot;&gt;valuable piece of information I found&lt;/a&gt; is that a code did exists but they removed it from &lt;em&gt;el Captain&lt;/em&gt; OSX version.&lt;/p&gt;
+&lt;p&gt;There is no code, and the only way to recover your account is to receive a code to a secure phone number or another apple device.&lt;/p&gt;
+&lt;h2&gt;How to defeat US Border Control?&lt;/h2&gt;
+&lt;p&gt;Honestly? You can’t beat them without buying a temporary phone that doesn’t need to be activated with an AppleID.&lt;/p&gt;
+&lt;p&gt;It’s a loophole:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;you reset the phone on the plane&lt;/li&gt;
+&lt;li&gt;you land safely and go through the customs without any digital identity attached to you&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;so far so good but…&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;you turn on your phone&lt;/li&gt;
+&lt;li&gt;you have to set it up with your AppleID&lt;/li&gt;
+&lt;li&gt;but the recovery code is sent to your own phone&lt;/li&gt;
+&lt;li&gt;but the phone doesn’t work just yet&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;d’oh!&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;End of the story&lt;/h2&gt;
+&lt;p&gt;I think this is very much paranoid. I don’t plan to reset my phone on the plane as I evaluate the chances to be placed under control very little.&lt;/p&gt;
+&lt;p&gt;But I do like to think about all those problems about our privacy, our data and how this very innocent blog post or a &lt;strong&gt;Facebook comment might be placed out of context and used against me&lt;/strong&gt; in a future that I am not yet close to imagine. Who knows?&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Is it worth to care about your data? YES&lt;br&gt;
+Is it worth to loose your sleep on it? MAYBE NOT (YET)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What do you think?&lt;br&gt;
+Do you feel safe?&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Wordpress on Thin Air]]></title><description><![CDATA[How to squeeze Wordpress/MySql to the bare minimum memory consumption - and survive.]]></description><link>https://alialfredji.github.io/2017/wordpress-nginx-cache</link><guid isPermaLink="false">https://alialfredji.github.io/2017/wordpress-nginx-cache</guid><pubDate>Thu, 30 Mar 2017 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;This very website &lt;strong&gt;WAS&lt;/strong&gt; hosted on a &lt;a href=&quot;https://m.do.co/c/0a72735ae62e&quot;&gt;512Mb Ram Digital Ocean droplet&lt;/a&gt; and is still able to serve an benchmarked &lt;strong&gt;252 pages per second&lt;/strong&gt; with 50 concurrent requests being made.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/wocker-benchmark.jpg&quot; alt=&quot;benchmark&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How is this possible?&lt;/strong&gt;&lt;br&gt;
+cache my friend, it’s all about cache.&lt;/p&gt;
+&lt;p&gt;In this article I’m going to share with you my findings learning &lt;strong&gt;how to run a Wordpress website on very limited resources&lt;/strong&gt;…&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Wordpress on Thin Air :-)&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Of course is Docker!&lt;/h2&gt;
+&lt;p&gt;The short answer is &lt;strong&gt;“Wocker”&lt;/strong&gt;, which is my personal mix of Wordpress and Docker. This setup enables me to run a highly performant website on a &lt;a href=&quot;https://m.do.co/c/0a72735ae62e&quot;&gt;5$/mo fully dedicated virtual server&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I have the freedom of choosing every single detail of my setup, libraries and side technologies (as NodeJS). And I can host multiple projects on this machine (all Docker projects), reducing even more the monthly fee.&lt;/p&gt;
+&lt;p&gt;Even if I won’t cover the full Docker setup in this article, I would like to give you an idea of the &lt;code class=&quot;language-text&quot;&gt;docker-compose.yml&lt;/code&gt; as it was before introducing NGiNX:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;version: &amp;#39;2&amp;#39;
+services:
+  database:
+    image: mysql|mariadb
+    volumes:
+      - ./db:/var/lib/mysql
+  wordpress:
+    image: wordpress:4.7
+    volumes:
+      - ./wp/wp-content:/var/www/html/wp-content
+    ports:
+      - 8080:80&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;NOTE:&lt;/strong&gt; the code above is not complete. The scope of this article is to understand the problem and the solution. If you want all the juicy details &lt;a href=&quot;https://github.com/marcopeg/marcopeg.com&quot;&gt;my blog’s codebase is open source on GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2&gt;1. Memory Limit your Wordpress&lt;/h2&gt;
+&lt;p&gt;When it comes to create a DAMP (Docker, Apache, MySql, PHP) installation you can cut a lot of corners by using the &lt;a href=&quot;https://hub.docker.com/_/wordpress/&quot;&gt;Wordpress official image&lt;/a&gt;. It works just fine.&lt;/p&gt;
+&lt;p&gt;Even so, you should be really be aware that official images come with a &lt;strong&gt;very generic configuration&lt;/strong&gt; for both Apache and MySQL, and are quite &lt;strong&gt;eager in memory&lt;/strong&gt; consumption. &lt;/p&gt;
+&lt;p&gt;I have already wrote about this argument and you can find details &lt;a href=&quot;http://marcopeg.com/2016/dockerized-mysql-crashes-lot/&quot;&gt;how to configure Wordpress on Docker in a low memory VPS here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The final result is that we can &lt;strong&gt;allocate just 200Mb for the entire project&lt;/strong&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;MEM_LIMIT_MYSQL=64m
+MEM_LIMIT_APACHE=96m
+MEM_LIMIT_NGINX=40m&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now, with such limitation we can’t really expect our system to perform well under pressure, can we? It actually performs very poorly and the blog crashes consistently whit a &lt;em&gt;low-to-ridiculous&lt;/em&gt; load.&lt;/p&gt;
+&lt;p&gt;Let just say that it works fine if you are the only guy working or consuming contents for your blog. Im my case this is totally fine for the content authoring part, but is not acceptable for the content consumption part.&lt;/p&gt;
+&lt;h2&gt;Let NGiNX serve your static assets&lt;/h2&gt;
+&lt;p&gt;Wordpress is a CMS system so it is obviously &lt;strong&gt;responsible for crafting your pages&lt;/strong&gt; and organizing your media files. Are you sure it should be responsible for serving those files either?&lt;/p&gt;
+&lt;p&gt;My first step was to wrap my &lt;code class=&quot;language-text&quot;&gt;wordpress&lt;/code&gt; service behind a &lt;code class=&quot;language-text&quot;&gt;proxy&lt;/code&gt; (service) which implements NGiNX with a simple configuration that takes care of serving the static assets with the proper cache headers:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# docker-compose.yml
+services:
+  proxy:
+    image: nginx:1.11
+    links:
+      - wordpress:wordpress
+    ports:
+      - 80:80
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./server-configs-nginx:/etc/nginx/server-configs-nginx
+      - ./wp/wp-content:/var/www/static/wp-content&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Configuring NGiNX for this task doesn’t take many lines of code but sure as hell it took for me a lot of googling to put it together, and I am not even 100% sure of everything I wrote in it.&lt;/p&gt;
+&lt;p&gt;(So please &lt;strong&gt;fill the gaps by dropping a comment&lt;/strong&gt;, I will appreciate your contribution very much.)&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# nginx.conf
+http {
+    server {
+        listen 80 default_server;
+
+        root /var/www/static/;
+        proxy_set_header Host $host:$server_port;
+
+        charset utf-8;
+        include ./server-configs-nginx/mime.types;
+
+        # Static Files Cache Headers
+        location /wp-content/ {
+            expires 1M;
+            access_log off;
+            add_header Cache-Control &amp;quot;public&amp;quot;;
+
+            add_header X-NGiNX-Proxy true;
+            try_files $uri $uri/ =404;
+        }
+
+        # Proxy to wordpress upstream:
+        location / {
+            proxy_set_header        Host $host;
+            proxy_set_header        X-Real-IP $remote_addr;
+            proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header        X-Forwarded-Proto $scheme;
+
+            proxy_pass http://wordpress:80;
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;With this layer Apache is offloaded from serving all the static assets and I did that because there is plenty of literature around the web &lt;strong&gt;praising NGiNX for dealing with static assets very fast&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE1:&lt;/strong&gt; the &lt;code class=&quot;language-text&quot;&gt;server-configs-nginx/mime.types&lt;/code&gt; file please refer to &lt;a href=&quot;https://github.com/h5bp/server-configs-nginx&quot;&gt;h5bp/server-configs-nginx&lt;/a&gt; repository. That dude knows his stuff.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;NOTE2:&lt;/strong&gt; I have experienced bit troubles trying to run the system on a custom port (es. &lt;code class=&quot;language-text&quot;&gt;8080&lt;/code&gt;) due to infinite redirects triggered by Wordpress. The only workaround I found so far is to remove the &lt;code class=&quot;language-text&quot;&gt;template_redirect&lt;/code&gt; filter in your custom theme:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# wp-contents/themes/custom-theme/functions.php
+remove_filter(&amp;#39;template_redirect&amp;#39;,&amp;#39;redirect_canonical&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;But I am not ready to give up and will continue looking for better ways. If you know how to solve this please drop a comment!&lt;/p&gt;
+&lt;h2&gt;Let NGiNX cache your pages&lt;/h2&gt;
+&lt;p&gt;The first move was good but it didn’t really solve my problem as PHP is still in charge to produce the HTML content of my pages.&lt;/p&gt;
+&lt;p&gt;Before to undertake this cache endeavour I tried different Wordpress caching plugins. They work fine but:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;I really wanted to keep my plugins setup to the bare bone&lt;/li&gt;
+&lt;li&gt;a plugin still relay on PHP which is an overhead when it comes to serve cache&lt;/li&gt;
+&lt;li&gt;I have Docker, I can do what I want!&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Next step is to extend my NGiNX configuration to implement a &lt;strong&gt;fully static cache layer&lt;/strong&gt; which works outside my Wordpress installation. &lt;/p&gt;
+&lt;p&gt;There are some obvious benefits:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Wordpress doesn’t know about it, no overhead&lt;/li&gt;
+&lt;li&gt;NGiNX is capable of caching out of the box&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;And there are some questions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;How do I invalidate cache?&lt;/li&gt;
+&lt;li&gt;How long do I keep cache?&lt;/li&gt;
+&lt;li&gt;Can I enable / disable the cache layer from the admin panel?&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I still don’t have all the answers as I’m still learning all this stuff but I really wanted to share this article with you because it made my website so much faster and I believe you will benefit too.&lt;/p&gt;
+&lt;p&gt;Here is my new &lt;code class=&quot;language-text&quot;&gt;nginx.conf&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http {
+
+    # Set storage for the static cache
+    proxy_cache_path /tmp/nginx levels=1:2 keys_zone=cache:30m max_size=1G;
+    proxy_cache_key &amp;quot;$scheme$request_method$host$request_uri&amp;quot;;
+
+    server {
+        ...
+
+        location / {
+            
+            # Implement the actual cache
+            proxy_cache cache;
+            proxy_cache_valid 1y;
+            add_header X-Proxy-Cache $upstream_cache_status;
+           
+            proxy_pass http://wordpress:80;
+        }
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Useful Resources&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://serversforhackers.com/nginx-caching&quot;&gt;Caching static assets with NGiNX&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.nginx.com/resources/admin-guide/content-caching/&quot;&gt;Content caching with NGiNX&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Next Steps&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;I would like to invalidate the cache every time I change some content&lt;/li&gt;
+&lt;li&gt;I would like to enable / disable the cache layer at will, maybe with a custom &lt;code class=&quot;language-text&quot;&gt;docker-compose&lt;/code&gt; extension file&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title><![CDATA[Docker Stats with Containers Names]]></title><description><![CDATA[There is a way to get container's names out of `docker stats`, and Docker Humble makes it ridicolously easy for you.]]></description><link>https://alialfredji.github.io/2017/docker-stats-containers-names</link><guid isPermaLink="false">https://alialfredji.github.io/2017/docker-stats-containers-names</guid><pubDate>Thu, 09 Feb 2017 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;When running plenty of containers you may wonder which one is killing your server memory or CPU.&lt;br&gt;
+Then your first step would be to run:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;docker stats&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That is the basic first step to know what’s going on… too bad it shows only container’s IDs which - if you ask me - is not very useful.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/docker-stats.png&quot; alt=&quot;docker-stats&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Today I resolved to see container’s names so I googled my problem only to find out that you can actually configure which format you want &lt;code class=&quot;language-text&quot;&gt;docker stats&lt;/code&gt; to speak the results:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;docker stats $(docker ps --format={{.Names}})&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;Now we are getting somewhere!&lt;/em&gt; I thought. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/humble-do-stats.png&quot; alt=&quot;humble-do-stats&quot;&gt;&lt;/p&gt;
+&lt;p&gt;One second later I realised I will never remember it so I added it as utility to my Docker helper project &lt;a href=&quot;https://github.com/marcopeg/humble-cli&quot;&gt;Humble&lt;/a&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;humble do stats&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;(If you are currently using &lt;strong&gt;Docker Humble&lt;/strong&gt; please remember to update it: &lt;code class=&quot;language-text&quot;&gt;humble update-cli&lt;/code&gt;)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[What is it like to be a Junior Developer?]]></title><description><![CDATA[It’s the magic moment in which you realise you can use your knowledge to make some money.]]></description><link>https://alialfredji.github.io/2016/junior-developer</link><guid isPermaLink="false">https://alialfredji.github.io/2016/junior-developer</guid><pubDate>Fri, 25 Nov 2016 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;I’ve been in this business for more than fifteen years and I saw things and heard requests that you can barely conceive in your wildest dreams.
+&lt;strong&gt;I’m an IT consultant.&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Most of the time I’ve said “YES”
+and that’s why I haven’t made much money yet&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I believe you should always push forward to face the next challenge, but sometimes it is worth to pause and run a personal retrospective; a &lt;strong&gt;check-up of our career path&lt;/strong&gt;, so to speak.&lt;/p&gt;
+&lt;p&gt;Today I want to share with you a reflection about some stages of “&lt;em&gt;being a consultant&lt;/em&gt;” that I have been through in first person.&lt;/p&gt;
+&lt;h2&gt;Phase 1&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You tell me what to do,
+and I’ll do it&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That’s &lt;em&gt;Phase 1&lt;/em&gt;. It’s the magic moment in which &lt;strong&gt;you realise you can use your knowledge to make some money&lt;/strong&gt;. You are often a youngster on the edge of high school or something like that.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I was running the second year of my computer science studies when a relative of a friend (of a friend) approached me saying: “so you make websites, uh? I need one. How much do you ask for one?”&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;— That was my “Ooohh” moment —&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In &lt;em&gt;Phase 1&lt;/em&gt; you don’t care much about the quality or the process, you just swim to stay afloat and get to the end of the task/project. You want to deliver something that works, no matter how.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This is called being a “Junior Consultant (or programmer)” and it’s all about &lt;strong&gt;gathering all the knowledge you need in order to deliver&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Step by step you discover that your knowledge thrived, and you start to have opinions about “how” to solve a problem.&lt;/p&gt;
+&lt;p&gt;The moment you get caught in a religion war on best practices or bad mistakes you realise you are not a Junior anymore.&lt;/p&gt;
+&lt;h2&gt;Phase 2&lt;/h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You tell me what needs to be done,
+I’ll choose the best way to do it,
+and &lt;strong&gt;then&lt;/strong&gt; I’ll do it&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That’s Phase 2, the longest in my career path, and the one that had given me the worst headaches and greatest rewards. During Phase 2 you become a “senior” and people look at you as source of trouble solving tricks and walking knowledge bucket.
+You are now the “go to man” for all the problems that juniors can’t solve, you feel happy as your paycheque grows, but it will not grow as fast as the amount of responsibilities that are dropped over your shoulders.
+If you are a freelancer, your phone will ring more than ever before. 
+If you are an employee, you will be given a phone, and it will ring a lot.
+As senior guy in IT you take part in customer meetings in order to help the business preparing their offers, as well as being in charge of the worst bug fixing and infrastructure maintenance. (to sleep at the office will save you commuting time, think about it)
+And you should also take the time to help junior guys to develop themselves, and managers putting together their fancy spreadsheets (yes, you have to use the good’ol Excel, Google Docs is way to advanced).
+This is a critical phase which may develop in two very different ways: one is good and one is not. Of course there is also a third option :-)
+The “not so good” outcome is that you will grow into a management position.
+I saw this happening quite few times: the guy is skilled but he has no time to develop himself any further, he slowly decline his practical skills but can not be fired because he has worked with the company since forever, therefore they’ll promote him to become a project manager (or equivalent fancy title).
+That is not a good thing because Management is Tough and you should undertake that career only after a life call. 
+Management is much like Teaching, 
+and so far I’ve met few good teachers
+and even fewer good managers
+The third option is that you move up into the “senior career ladder” and become a system architect or something like that (there are different roles in different companies but they all mean the same thing).
+This is not a bad option and I have considered it for long time (it is actually the title I have in my current daily job). Especially in corporate companies, it can lead to a big fat paycheck and a lot of bonuses.
+The problem I see here is scalability: you will never be able to work more than a given amount of hours per day, therefore you will quickly reach the limit of your career growth. Since the moment you reach the top you are exposed to the risk that a younger guy with fresh skills comes into the picture to threaten your position. You’ll be scared 24/7, play defensive, and basically become an @$$**le to your colleagues.
+I have been that you guy once, and I did feel what “playing in defending mode” looks like: It’s not cool and I don’t want to end that way.
+Fortunately there is a way out and it was quite a revelation to me. 
+The way out is professional teaching.&lt;/p&gt;
+&lt;h1&gt;Phase 3&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You tell me what it needs to be done,
+I’ll coach your team with the necessary knowledge and skills,
+&lt;strong&gt;and They’ll do it&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;If you have read so far you may have already guessed that this is Phase 3. That’s the though one. Compared to Phase 3, the previous phases are much like walking the dog through the park in a fresh spring morning. 
+Teaching is Life’s real big deal
+For me teaching is like sailing: in theory it is very simple, but then the sea is always moving around and a swift gust of wind is capable of screwing you up.
+The good part of Phase 3 is the scalability. You can teach to many guys at the same time and you can charge each of them as you were giving a one to one lesson. 
+I have taught to single guys as well as small groups of 4–10 colleagues. The level of passion and communication skills that you have to pull are almost the same. But with groups you will see many happy faces around you.
+In my opinion and experience it is even easier to teach to large groups because you can make allies within the stronger members and actually let those guys help you teaching the others.
+I didn’t born a teacher: I worked hard to become a teacher, I’m still on the learning path, and I made mistakes and left casualties along the way.
+My wife Silvia was my first real student, and shortly after,  I taught to a group of Swedish colleagues. Poor guys, they really had helped me learning how to teach more than me teaching Javascript.
+Teaching is a fine art of listening and understanding what the counterpart is willing to learn. The teacher is not in control of the peace of his own lecture. Contents and exercises must be tailored to the needs of your audience.
+This is not what they normally do in schools, but this is how I’ve learned to teach in order to get the best amount of knowledge transfer per time unit.
+Before serving a lecture I try to write an article, or to produce a presentation as I was to give a public presentation. This way  I  isolate the key points of the lesson and remove the buzz out of it. 
+It takes time to prepare a good lesson, but remember that you can teach to large groups and extract great value (aka: $$) out of your preparation time.
+Teaching is good and for sure one of the greatest passions of my life. But the story doesn’t end here. There is much more we consultant can do!&lt;/p&gt;
+&lt;h1&gt;Phase 4&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;You tell me what it needs to be done,
+I’ll show your team how to use an appropriate Product to solve your problem
+&lt;strong&gt;and They’ll do it&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;One of the greatest truth that I’ve learn in life, at least in my IT life, is: 
+if a service/product is worth to be done, 
+then somebody is already selling it.
+Phase 4 is about to put your knowledge and experience to work with the sole purpose of finding and selecting services and products that solve general problems in a simple of particularly effective way.
+Once you have discovered those products you can replace “teaching how to do” with “teaching how to use” from Phase 3.
+It’s easier to learn “how to use” a product,
+rather than “how to solve” a problem.
+The matter is very simple. Consider the following example: it takes less time to learn how to use Heroku rather than to learn how to set up a custom deploy mechanism on a self hosted machine. 
+It’s a matter of extracting the real business value of a possible solution.
+It is also way more fast and easier to teach how to use an existing product, rather how to conceive a solution to a problem that you don’t know yet.
+This takes the scalability of teaching to the next level and makes you able to get more money out of your time, or more free time for the same amount of money. But that is much more of a philosophical question. Which kind of person are you? I don’t judge, for me it’s good enough to create more with less.
+If you take Phase 4 to its full extend you may end working as evangelist for one cool company like Heroku or Firefox.
+An evangelist spends most of its time traveling from conference to conference and gives speeches and demo of a single product. He/she also has a blog and go wide on social media to spread the voice. It is not a bad way to make a living out of if if you are inclined to travel a lot. Probably it is not the best setup if you plan to grow a family of your own.
+Anyway this is not yet the end. There is an even better way to use all the knowledge that you grew during Phase 1 and Phase 2.&lt;/p&gt;
+&lt;h1&gt;Phase 5&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I identify a repetitive piece of work that many companies need to do,
+I create a product that solves the problem,
+&lt;strong&gt;and I sell it&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To date the most exciting way I know to employe my skills is to build a product that other can use and enjoy. The key point is that you build a product once, and then it can be used by countless people, countless time.
+Nothing scales better than selling a product.
+My real life experience is not yet tied to successful story when it comes to produce money by crafting and selling a product. So far I just enjoy the “making of” and I release my creations on GitHub under an Open Source license.
+I’m still learning all the glitches of Phase 5 but I can tell you that it’s all great fun and even if you don’t make money directly you can still charge people to teach them how to use the product you are building. Of course this requires you to build something valuable.
+NOTE: As far I understand the value in a product is related to the amount of time that you save to the end user. Please don’t create a product that requires to read a book in order to be used!&lt;/p&gt;
+&lt;h1&gt;Phase 5.5&lt;/h1&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I understand that and write an article about it,
+so You can get to know me
+&lt;strong&gt;and You buy my products&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;That’s more or less what Medium is all about, isn’t it?
+Of course I’m kidding, but it is also true that behind every joke there is a trace of truth and this is no exception. The more time I spend on Medium the more I learn that writing articles is a marketing strategy. 
+Therefore I’m writing this article to channel my experience and the way I think about my profession as IT consultant. 
+If you are a young guy eager to throw yourself into the Game I hope you will use this words to avoid some obvious mistakes that I have done.
+If you are an experience consultant I hope I get you to laugh here and there and made you to think to your own career path. (please contact me to share your experience and reflections about it, I will be pleased to meet you)
+Anyway I hope you enjoyed the reading and please share the article with your friends :-)&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Dockerized MySQL Crashes a Lot!]]></title><description><![CDATA[Have you ever experienced a dockerized MySQL to stuck in low memory VPS? I did and luckily I found a solution! (yes, I googled it)"]]></description><link>https://alialfredji.github.io/2016/dockerized-mysql-crashes-lot</link><guid isPermaLink="false">https://alialfredji.github.io/2016/dockerized-mysql-crashes-lot</guid><pubDate>Mon, 14 Nov 2016 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;This blog is being hosted on a &lt;a href=&quot;https://m.do.co/c/0a72735ae62e&quot;&gt;5$/mo DigitalOcean droplet&lt;/a&gt; and it is served as &lt;a href=&quot;https://github.com/marcopeg/humble-cli&quot;&gt;Docker Humble&lt;/a&gt; project. &lt;strong&gt;Docker gave me pure freedom in my technology stack&lt;/strong&gt; for a reasonable 60$/year price. I like it, a lot.&lt;/p&gt;
+&lt;p&gt;What I don’t like is the &lt;strong&gt;tendency to crash&lt;/strong&gt; that seems to be idiosyncratic to my setup. It’s been going on since a couple of days: every works fine for a while, and then MySQL kinda crashes giving me a mysterious message:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/mysql-error.png&quot; alt=&quot;mysql-error&quot;&gt;&lt;/p&gt;
+&lt;p&gt;So I wore my &lt;em&gt;debugging hat&lt;/em&gt; and I started investigating the issue. In this article I’m going to place a link to the solution I found.&lt;/p&gt;
+&lt;p&gt;Please consider my background:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I’m 35. I’m old and my brain is not fast as yours&lt;/li&gt;
+&lt;li&gt;I’m a front-end developer. I use terminal because I have to, given a choice I wouldn’t&lt;/li&gt;
+&lt;li&gt;I don’t know s**t about server setup and management. To me is a miracle when things work&lt;/li&gt;
+&lt;li&gt;I love Docker because simplifies my life but I feel I am a total beginner with it&lt;/li&gt;
+&lt;li&gt;I work on a tiny budget&lt;/li&gt;
+&lt;li&gt;I work on a tiny budget&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Give me the Solution, NOW!&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://atqu.in/blog/2015/11/11/optimising-wordpress-and-mysql-docker-images-for-amazon-ec2-micro-instances/&quot;&gt;Click here, this is the solution&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;small&gt;(I plan to send flowers to that guy, it really made the whole thing simple to me)&lt;/small&gt;&lt;/p&gt;
+&lt;h2&gt;How’d you get there?&lt;/h2&gt;
+&lt;p&gt;Glad you asked, please take a seat and enjoy your flight!&lt;/p&gt;
+&lt;h2&gt;I’m working on a tiny budget, but I aim for the stars!&lt;/h2&gt;
+&lt;p&gt;In order to do my best in my current role I decided to learn something about Wordpress. I despised it for long years but not it looks like I can’t get rid of it, so I’ve embraced it.&lt;/p&gt;
+&lt;p&gt;Anyway I really hate the idea to spend money on MAMP Pro like I used to do in the past, today we have &lt;a href=&quot;http://docker.com&quot;&gt;Docker&lt;/a&gt; and everything should be fast and easy thanks to tools like &lt;a href=&quot;https://docs.docker.com/compose/&quot;&gt;Docker Compose&lt;/a&gt; and &lt;a href=&quot;https://github.com/marcopeg/humble-cli&quot;&gt;Docker Humble&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;I know I know, everybody says you shouldn’t use &lt;a href=&quot;http://docker.com&quot;&gt;Docker&lt;/a&gt; to manage state-full services like databases. I agree on that as &lt;strong&gt;best practice for big projects&lt;/strong&gt; with a huge data load. &lt;/p&gt;
+&lt;p&gt;But here I’m running my small small blog, and the only thing I care about is &lt;strong&gt;to make it simple for me to manage&lt;/strong&gt;. Therefore I run MySQL as part of my &lt;a href=&quot;https://docs.docker.com/compose/&quot;&gt;Docker Compose&lt;/a&gt; stack, straight into my production server.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Everything works fine on a &lt;a href=&quot;https://m.do.co/c/0a72735ae62e&quot;&gt;5$/mo DigitalOcean droplet&lt;/a&gt;, but for the fact that &lt;strong&gt;every now and then MySQL crashes&lt;/strong&gt; and I can’t figure out why!!!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ol&gt;
+&lt;li&gt;I’m not used to server management&lt;br&gt;
+&lt;small&gt;(I was just a humble front-end developer until yesterday)&lt;/small&gt;&lt;/li&gt;
+&lt;li&gt;I am absolutely no familiar with process debugging&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;My wild guess is that is a memory problem:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Just after I restart the project everything works just fine&lt;/li&gt;
+&lt;li&gt;It holds for 24-48 hours (give or take)&lt;/li&gt;
+&lt;li&gt;The container doesn’t crash (I guess MySQL process doesn’t crash either)&lt;/li&gt;
+&lt;li&gt;Wordpress just can’t connect to the database anymore&lt;/li&gt;
+&lt;li&gt;Other websites (waaay bigger than mine) that run on bigger servers don’t have this problem&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;Actions I plan to take:&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Monitor my homepage to detect when it’s down&lt;/li&gt;
+&lt;li&gt;Figure out how to access MySQL logs&lt;/li&gt;
+&lt;li&gt;Restart MySQL service every night if this helps to mitigate the problem&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;It’s a Humble Setup:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;First things first: &lt;a href=&quot;https://m.do.co/c/0a72735ae62e&quot;&gt;I’m running a Dockerized Wordpress application on a 512Mb DigitalOcean Droplet that I’m paying just 5$/mo&lt;/a&gt;. This is most probably too small to efficiently run the full setup and many friends told me just to move on to a bigger (aka: more expensive) setup.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I’m stubborn and I don’t want to spend more money!&lt;/li&gt;
+&lt;li&gt;I would like to find a solution and keep it running on my current setup.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Round1: Monitoring&lt;/h2&gt;
+&lt;p&gt;The idea is to start to &lt;strong&gt;track down how often the problem manifest and to look for a pattern&lt;/strong&gt;, at the same time I want to export MySQL logs so next time it’ll go down I will be able to understand why, hopefully.&lt;/p&gt;
+&lt;p&gt;Wordpress’ ugly &lt;code class=&quot;language-text&quot;&gt;Error establishing a database connection&lt;/code&gt; gives us an &lt;code class=&quot;language-text&quot;&gt;HTTP 505&lt;/code&gt; so &lt;strong&gt;I guess I can use some free online resources to monitor it&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/mysql-error.png&quot; alt=&quot;mysql-error&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I ran a quick search for &lt;a href=&quot;https://www.google.se/search?q=free+online+monitoring+services&amp;#x26;oq=free+online+monitoring+services&amp;#x26;aqs=chrome..69i57j0l4.303j0j7&amp;#x26;sourceid=chrome&amp;#x26;ie=UTF-8&quot;&gt;free online monitoring services&lt;/a&gt; and I gave a go to &lt;a href=&quot;http://uptimerobot.com&quot;&gt;UptimeRobot&lt;/a&gt;. It looks easy and it gives me 50 watchers that run every 5 minutes &lt;strong&gt;for free&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I expect to be notified as soon my blog goes down!&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Round2: Logging&lt;/h2&gt;
+&lt;p&gt;This is quite silly, but after some googling I realised &lt;code class=&quot;language-text&quot;&gt;docker-compose logs mysql&lt;/code&gt; is all you need to access MySQL logs.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;I couldn’t find any useful logs anyway.&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Round3: MySQL Memory Consumption&lt;/h2&gt;
+&lt;p&gt;I decided to &lt;strong&gt;follow up with the &lt;em&gt;running out of memory&lt;/em&gt; lead&lt;/strong&gt; and it turned out it was the right direction to go.&lt;/p&gt;
+&lt;p&gt;You can use a combination of &lt;code class=&quot;language-text&quot;&gt;docker-compose ps&lt;/code&gt;, &lt;code class=&quot;language-text&quot;&gt;docker-ps&lt;/code&gt; and &lt;code class=&quot;language-text&quot;&gt;docker stats&lt;/code&gt; to get the CPU, memory, net and disk i/o of your containers:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/mysql-docker-stats.png&quot; alt=&quot;mysql-docker-stats&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I didn’t like what I saw.&lt;br&gt;
+&lt;strong&gt;MySQL allocated 200Mb of RAM just after booting up&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;And we are talking of a blog with 10 small articles and no traffic at all. It’s just a dummy project!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Whaaaaat?&lt;br&gt;
+is Docker that bad?&lt;br&gt;
+or is MySQL thaaaaat bad?  &lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;no, that is NOT the case!&lt;/strong&gt;
+&lt;small&gt;It’s just you being cheap on your server!&lt;/small&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Again, I’m running on the &lt;a href=&quot;https://m.do.co/c/0a72735ae62e&quot;&gt;smallest DigitalOcean droplets&lt;/a&gt;.&lt;br&gt;
+&lt;strong&gt;It’s just 512Mb RAM for the entire virtual machine!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;I am so used to almost unlimited resources on my MacBookPro that I tend to not take into account what 512Mb are: &lt;strong&gt;they ain’t much!&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The next obvious step is to figure out how to optimise my services to either &lt;strong&gt;consume less memory or reboot automatically&lt;/strong&gt; over a critical threshold.&lt;/p&gt;
+&lt;h2&gt;Round4: Memory Optimisation&lt;/h2&gt;
+&lt;p&gt;My first attempt to optimise my setup was by &lt;strong&gt;shrinking down MySQL’s Ram footprint&lt;/strong&gt;. After some googling I traced down a couple of contradicting tutorials that claim to achieve the best possible memory footprint ever. Of course it was just a tiny bit more complicated than that, plus I don’t know s**t about MySQL configuration.&lt;/p&gt;
+&lt;p&gt;I ended up building my own custom configuration file &lt;code class=&quot;language-text&quot;&gt;my.cnf&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;[mysqld]
+performance_schema=off
+
+innodb_buffer_pool_size=5M
+innodb_log_buffer_size=256K
+query_cache_size=0
+max_connections=10
+key_buffer_size=8
+thread_cache_size=0
+host_cache_size=0
+innodb_ft_cache_size=1600000
+innodb_ft_total_cache_size=32000000
+
+thread_stack=131072
+sort_buffer_size=32K
+read_buffer_size=8200
+read_rnd_buffer_size=8200
+max_heap_table_size=16K
+tmp_table_size=1K
+bulk_insert_buffer_size=0
+join_buffer_size=128
+net_buffer_length=1K
+innodb_sort_buffer_size=64K
+
+binlog_cache_size=4K
+binlog_stmt_cache_size=4K&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;I don’t understand much of it.&lt;br&gt;
+However the first setting alone reduces the memory impact from ~200Mb to ~50Mb.&lt;/p&gt;
+&lt;p&gt;A second step was to &lt;strong&gt;limit container’s memory&lt;/strong&gt; in my &lt;code class=&quot;language-text&quot;&gt;docker-compose.yml&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;version: &amp;#39;2&amp;#39;
+services:
+  mysql:
+    volumes:
+      - ./services/mysql/my.cnf:/etc/mysql/my.cnf
+    mem_limit: 50m
+    restart: always
+
+    wordpress:
+      mem_limit: 150m
+      restart: always&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;That seemed to get the job done on my working machine,&lt;br&gt;
+&lt;strong&gt;so I promptly pushed to production&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3&gt;Here are some personal observations:&lt;/h3&gt;
+&lt;p&gt;I noticed that forcing ludicrously low memory limit Docker induces heavy I/O on the disk. The way I understand it is that &lt;strong&gt;Docker forces the process to swap memory to the permanent storage instead of crashing the container&lt;/strong&gt; approaching memory limit. I’m not sure I have a good understanding of that and I plan to investigate more.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;An interesting fact is that this behaviour causes almost no problems on my development machine, but &lt;strong&gt;it kills my containers on my DigitalOcean droplet&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;At the moment of writing I’m giving 50Mb to MySQL and 150Mb to Apache and it looks like it’s behaving quite good.&lt;/p&gt;
+&lt;p&gt;If this turns out to be a reliable setup I might be able to run 2 Wordpress projects inside a &lt;a href=&quot;https://m.do.co/c/0a72735ae62e&quot;&gt;5$/mo droplet&lt;/a&gt;. That means 30$/year dedicated hosting, which is absolutely not bad compared to a shared hosting. &lt;/p&gt;
+&lt;p&gt;I can still add whatever library I may want and weird language or service to my setup. &lt;strong&gt;That’s pure freedom for a ridiculous amount of money&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;Round5: PHP-FPM&lt;/h2&gt;
+&lt;p&gt;If you take a closer look at &lt;a href=&quot;https://hub.docker.com/_/wordpress/&quot;&gt;Docker Wordpress&lt;/a&gt; you notice they have an &lt;em&gt;Apache&lt;/em&gt; and &lt;em&gt;FPM&lt;/em&gt; version.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;What is _FPM&lt;/em&gt; anyway?_&lt;br&gt;
+I didn’t know and I didn’t care. &lt;strong&gt;I just thought it may be lighter&lt;/strong&gt; than &lt;em&gt;Apache&lt;/em&gt; so I tried it.&lt;/p&gt;
+&lt;p&gt;And I failed!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Wordpress-FPM&lt;/em&gt; is not a drop in replacement for the Apache version. It requires some love and an &lt;em&gt;NGiNX&lt;/em&gt; proxy to work. &lt;a href=&quot;https://hub.docker.com/r/bcardiff/nginx-4-wordpress-fpm/&quot;&gt;Fortunately some good guy did it already&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For what I could see &lt;strong&gt;&lt;em&gt;Wordpress-FPM&lt;/em&gt; is actually lighter&lt;/strong&gt; that the &lt;em&gt;Apache&lt;/em&gt; version but the setup hassle makes it not worth to me. I’m giving 5 minutes to each possible solution as this is just a personal project!&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Remember? I’m running on a tiny tiny budget!&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;Round6: Wordpress Image Optimisation&lt;/h2&gt;
+&lt;p&gt;Next step involves another round of Googling. Now that MySQL memory is under control I would like to do achieve the same with Apache/Wordpress. &lt;/p&gt;
+&lt;p&gt;My query was straightforward and I regret not to have searched for it earlier as it produced the complete solution as first result: &lt;strong&gt;&lt;a href=&quot;https://www.google.se/webhp?sourceid=chrome-instant&amp;#x26;ion=1&amp;#x26;espv=2&amp;#x26;ie=UTF-8#q=optimise%20docker%20wordpress%20memory&quot;&gt;optimise docker wordpress memory&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/mysql-answer.png&quot; alt=&quot;mysql-answer&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;From now on is pure theory,
+but thank you for reading!&lt;/p&gt;
+&lt;/blockquote&gt;</content:encoded></item><item><title><![CDATA[The Holy Grail of Code Sharing]]></title><description><![CDATA[Code sharing is a concept which is whispered in low tone around the office, is being shouted loud by tools producers and is simply misunderstood by the great part of us, IT folks.]]></description><link>https://alialfredji.github.io/2015/the-holy-grail-of-code-sharing</link><guid isPermaLink="false">https://alialfredji.github.io/2015/the-holy-grail-of-code-sharing</guid><pubDate>Sat, 28 Feb 2015 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;Code sharing is a concept which is whispered in low tone around the office, is being shouted loud by tools producers and is simply misunderstood by the great part of us, IT folks.&lt;/p&gt;
+&lt;p&gt;Management people wish every single line of code to be shared and 100% reusable, they see only one single fact: &lt;em&gt;less code means less costs&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Product Owners and Scrum Masters have big troubles in understanding why to put time in code sharing practices, their way of thinking is: &lt;em&gt;better done than perfect&lt;/em&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Developers… where do I start?&lt;br&gt;
+Oh yes, all we want is just to code and create amazing apps!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;This is the story about how &lt;strong&gt;my team faced the challenge to improve code sharing&lt;/strong&gt; among the company with the great objective to improve code quality, reduce time to market and create happier developers.&lt;/p&gt;
+&lt;h2&gt;Our Problem&lt;/h2&gt;
+&lt;p&gt;I work in a service company whose core business is mobile web applications development. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We sell development time to customers who &lt;strong&gt;know what, but not how to&lt;/strong&gt; do business with mobile devices.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;We are more than 100 programmers divided into teams of 6 to 10 guys. Each group is highly committed to it’s project and suffer under high time pressure to fulfill our different customers expectations.&lt;/p&gt;
+&lt;p&gt;The projects around the company are not that different, we do tailored based customisations of a shared service, much like a classic web agency producing custom websites.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Today there is &lt;strong&gt;close to zero code sharing&lt;/strong&gt; around our teams and this fact costs us
+a lot of money.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/media/old-clock.jpg&quot; alt=&quot;old-clock&quot;&gt;&lt;/p&gt;
+&lt;p&gt;We are a service company and &lt;strong&gt;our trading value is our delopers time&lt;/strong&gt;.&lt;br&gt;
+When two teams solve the same problem in two different ways, they spend the double of the time. &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;And when you sell services, the rule of thumb is fairly easy:&lt;br&gt;
+&lt;strong&gt;“the double the time the half the revenue”&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;To share code across teams appear to be the obvious and easy solution to our problem, but &lt;strong&gt;it turned out that its not easy&lt;/strong&gt; to really implement this in a proper way.&lt;/p&gt;
+&lt;h2&gt;Our Struggle&lt;/h2&gt;
+&lt;p&gt;Our product is a quite complex mobile web application so we proposed &lt;strong&gt;to split the requirements into smaller chunks&lt;/strong&gt; that could be reusable and customisable by many teams.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We called those chunks &lt;em&gt;Features&lt;/em&gt; and for the purpose of this article you can think to features as &lt;em&gt;Login&lt;/em&gt;, &lt;em&gt;Payment&lt;/em&gt;, &lt;em&gt;Articles&lt;/em&gt;, …&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;A &lt;em&gt;Feature&lt;/em&gt; is a quite big part of the entire application that &lt;strong&gt;implements a single responsibility&lt;/strong&gt; like loggin-in users or enabling payments, etc. It’s smaller compared to the whole application but still it is a unfairly large piece of cake.&lt;/p&gt;
+&lt;p&gt;After some hard thinking we came up with a good understanding of the &lt;em&gt;Features&lt;/em&gt; that were involved in our apps and we were extremely happy and proud when &lt;strong&gt;we proposed the company to reorganize our developers into &lt;em&gt;Feature Teams&lt;/em&gt;&lt;/strong&gt; whose task is to implement a specific &lt;em&gt;Feature&lt;/em&gt; to be reausable by others.&lt;/p&gt;
+&lt;p&gt;This solution &lt;strong&gt;was hard to hear and accept by management&lt;/strong&gt; because it involved dramatic changes to the company’s structure and business model.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Feature Teams&lt;/em&gt; was just a dead end.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Our second approach was driven by the hard boundary to &lt;strong&gt;not change the company structure&lt;/strong&gt;.&lt;br&gt;
+&lt;small&gt;(We learned this lesson the hard way)&lt;/small&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/struggle.jpg&quot; alt=&quot;old-clock&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Long story short, we proposed to let our teams do their job and to create a side team of experts whose duty is to &lt;strong&gt;take existing custom code and &lt;em&gt;change it to make it reusable&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Also this time we became the target for jokes and laughter due to the concept of making things ”&lt;em&gt;more reusable&lt;/em&gt;”. What does it mean? I still don’t know.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The third time you try, you are more likely to succeed.&lt;br&gt;
+&lt;small&gt;If you are humble enough to learn from your mistakes.&lt;/small&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Our Solution&lt;/h2&gt;
+&lt;p&gt;Our final and most successful approach was to discard &lt;em&gt;high academic thinkings&lt;/em&gt; and to go straight down to the core of our daily job.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;we do not just write code,&lt;br&gt;
+&lt;strong&gt;we do solve problems with code!&lt;/strong&gt; &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So, instead of limit ourself to the struggle of code-sharing, we moved on and began to &lt;strong&gt;analyse where we were wasting time&lt;/strong&gt; within the company.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The most time expensive moment in every developer’s day is called &lt;strong&gt;&lt;em&gt;WTF&lt;/em&gt;&lt;/strong&gt;.&lt;br&gt;
+&lt;small&gt;&lt;em&gt;(What The Fuck)&lt;/em&gt;&lt;/small&gt;  &lt;/p&gt;
+&lt;p&gt;&lt;small&gt;This is not a bad or impolite expression. This is the technical name for the worst nightmare every man or woman, involved in the process of solving problems with code, has.&lt;/small&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Our &lt;strong&gt;first action point&lt;/strong&gt; was to put small and cross-team groups of developers into a room on a weekly basis with the only objective &lt;strong&gt;to share &lt;em&gt;WTF&lt;/em&gt; stories&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;To tell to your mates &lt;strong&gt;were you had issues and how you solved those&lt;/strong&gt; is not only about the code you wrote. It is all about the tools you used: &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;search engines queries&lt;/li&gt;
+&lt;li&gt;articles, books, blogs &amp;#x26; forums&lt;/li&gt;
+&lt;li&gt;colleagues that knew that s***&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The second action point was to &lt;strong&gt;raise the culture of enterprise code writing&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Enterprise Code Writing&lt;/em&gt; is nothing more than a small group of best practices that we can use when it comes to write code involving 130 people. Some of these are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;single responsibility principle&lt;/li&gt;
+&lt;li&gt;open source first&lt;/li&gt;
+&lt;li&gt;readability first&lt;/li&gt;
+&lt;li&gt;why » how » code&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This bullet list might just sound like a bunch of cliché expressions, but I have to use them in this article and actually each of them is worth their own entire book.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The general principle that should drive each of us is:&lt;br&gt;
+&lt;strong&gt;Don’t do bullshit!&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/media/no-bullshit.jpg&quot; alt=&quot;no-bullshit&quot;&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;to build a big module is way more expensive than to build small ones that can work together&lt;/li&gt;
+&lt;li&gt;to write my own DOM library is way more time consuming compared to use a jQuery custom build&lt;/li&gt;
+&lt;li&gt;to write my own knowledge base about Javascript is just not the way, I can search, read and link valuable articles that are already available online&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;All &lt;strong&gt;those examples are surprisingly difficult to achieve&lt;/strong&gt; when it comes to developers,
+the most proud and stubborn people of the planet!&lt;br&gt;
+&lt;small&gt;(and as matter of fact I am proud to be one of them!)&lt;/small&gt;&lt;/p&gt;
+&lt;h2&gt;Our Path&lt;/h2&gt;
+&lt;p&gt;When it comes to practical coding we have a simple action point which is &lt;strong&gt;micro coding&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;We left the idea of coding complete and reusable &lt;em&gt;Features&lt;/em&gt; way behind us. Today we focus in &lt;strong&gt;writing the least amount of code possible&lt;/strong&gt; for the smallest possible of the responsibilities. And we share that.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Each function, source file or module must solve one single problem, no more than one.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;By just doing that our developers have began to &lt;strong&gt;produce reusable code from the very first day of the change&lt;/strong&gt;, without introducing any new tool in their chain.&lt;/p&gt;
+&lt;p&gt;At the beginning we used a simple &lt;a href=&quot;https://www.dropbox.com&quot;&gt;DropBox shared folder&lt;/a&gt; to share our micro libraries,
+today we have evolved a bit by introduceing our second action point.&lt;/p&gt;
+&lt;p&gt;Our second practical action point is &lt;strong&gt;Open Source First&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If the solutions exists among the Open Source community we use it,&lt;br&gt;
+if we create our own solution, we publish it back for others to use.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Today we use &lt;a href=&quot;http://wiki.commonjs.org/wiki/CommonJS&quot;&gt;CommonJS&lt;/a&gt; and &lt;a href=&quot;http://npmjs.org/&quot;&gt;NPM&lt;/a&gt; to write our Javascript, if we need a
+library we search &lt;em&gt;NPM&lt;/em&gt; or &lt;em&gt;GitHub&lt;/em&gt;, if it exists we use it, if it exists on &lt;em&gt;GitHub&lt;/em&gt; but it is not available through &lt;em&gt;NPM&lt;/em&gt; we contribute to the project to fix it, then we use it through &lt;em&gt;NPM&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;This behaviour is much more than to merely &lt;em&gt;give back to the community&lt;/em&gt;.  &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;By actively publish open source code &lt;strong&gt;we get free help from the community&lt;/strong&gt; that
+contributes to our repositories by doing bug-traking, bug-fixing and code enhancement.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;For writing CSS we embrace the &lt;a href=&quot;http://www.smashingmagazine.com/2011/12/12/an-introduction-to-object-oriented-css-oocss/&quot;&gt;Object Oriented CSS&lt;/a&gt;
+and we use &lt;a href=&quot;http://lesscss.org/&quot;&gt;LessCss&lt;/a&gt; to build them, to easily do cross-browser compatibility we have chosen
+&lt;a href=&quot;http://lesshat.madebysource.com/&quot;&gt;LessHat&lt;/a&gt; which is quite simple
+and complete.&lt;/p&gt;
+&lt;p&gt;The third and most important action point was to &lt;strong&gt;challenge our developers&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;There is nothing better than prizes to &lt;strong&gt;light up your willing of doing&lt;/strong&gt;!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;So we introduced &lt;strong&gt;cross team challenges&lt;/strong&gt;: groups of 3-4 people from different teams who were competing to produce some fun apps or little games. &lt;/p&gt;
+&lt;p&gt;The prize was always quite impressive and at the very beginning some managers had an heart attack about that.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We have a play-room so we created a &lt;em&gt;ChallengeME&lt;/em&gt; app to invite a colleague to the
+table tennis, we do afterwork so we suggested a &lt;em&gt;PubRating&lt;/em&gt; app internal
+to the company… and much more!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Eventually the learning effort that every developer put into &lt;strong&gt;the challenge was affecting the quality of his daily job&lt;/strong&gt; so much that no money could have ever bought this accomplishment!&lt;/p&gt;
+&lt;p&gt;The best of it is that &lt;strong&gt;we exploited the proudness and stubbornness&lt;/strong&gt; which is natural in each developer to play a fundamental and positive role within the company: &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When a developer learn a better implementation he can not accept to see legacy code
+anymore so &lt;strong&gt;he/she coach other colleagues to improve&lt;/strong&gt;. For free!&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2&gt;Don’t forget your Take Away!&lt;/h2&gt;
+&lt;p&gt;Today my company is a better place to work and the quality of what we produce has increased greatly. We have really made some great accomplishments regarding code sharing and reusability.&lt;/p&gt;
+&lt;p&gt;We’re also planning to move more into a product business model, something we can do today because we now have the culture of enterprise coding and reusability built into every single one of our developers.&lt;/p&gt;
+&lt;p&gt;During the last year a great guy left the company because his &lt;strong&gt;improvements were public on &lt;em&gt;GitHub&lt;/em&gt;&lt;/strong&gt; and he was head hunted by one of our direct competitors. &lt;/p&gt;
+&lt;p&gt;This is good, he will learn even more from them but he can not stop to hang out with us, his old mates, we have become real friends through this experience, so &lt;strong&gt;all of the knowledge is coming back to us&lt;/strong&gt;!&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We started this experience more than one year ago, we faced a problem,
+we spiked some dead ends but eventually we made it. It took some time but it was worth it.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What we have learned is that &lt;strong&gt;code sharing is not about tools, but about culture&lt;/strong&gt;, is about people and knowledge, is about sharing the objective to spare some time from our daily struggles and to use it in a more fun and proficient manor.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Sleep tight and have an happy Life!]]></title><description><![CDATA[Backups are strange animals. In a perfect world you don’t need backups. You put efforts in building a solid backup strategy, you buy external drives, cloud storage and amazing software which you wish you never have to use in life.]]></description><link>https://alialfredji.github.io/2015/sleep-tight-and-have-an-happy-life</link><guid isPermaLink="false">https://alialfredji.github.io/2015/sleep-tight-and-have-an-happy-life</guid><pubDate>Fri, 16 Jan 2015 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;Backups are strange animals. In a perfect world you don’t need backups. You put efforts in building a solid backup strategy, you buy external drives, cloud storage and amazing software which you wish you never have to use in life.&lt;/p&gt;
+&lt;p&gt;So what? Why am I wasting all those efforts? Why do I live with a tera drive always plugged in my computer? Will a terabyte be enough by the way?&lt;/p&gt;
+&lt;p&gt;And when something really bad happens, when you see the bloody blue screen on a Windows machine, when your kids feed your powerless Mac with hot milk, what do you do? &lt;strong&gt;Do you remember how the restore procedure works?&lt;/strong&gt; It never works, not for me at least.&lt;/p&gt;
+&lt;p&gt;But today is your lucky day because I am going to tell you that useful and dead simple backup strategies exist. And they are just few clicks away.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The quick takeaway is to &lt;strong&gt;isolate the problem which shows up more often and solve it&lt;/strong&gt; in
+the simplest and most efficient way.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now try to be honest when you answer the following questions: How many times has a villain stolen your computer? How many times have you gotten destructive viruses? How many times have you screwed your code base because you have kept coding through out the night when you should have gotten some well deserved sleep?&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/steal-computer.jpg&quot; alt=&quot;steal-computer&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;For me is the “screwed code” scenario that is responsible for my worse headaches&lt;/strong&gt;. It happens to me as I enter this mystical mental space in which “I see the light”. I feel the urge to give life to my bright ideas so I start scrambling the existing code base here and there. Oh some times I get things done but it is a matter of luck. 8 times out of 10 it doesn’t work at all, and often I can’t go back to where I’ve started!&lt;/p&gt;
+&lt;p&gt;The (urgent) &lt;strong&gt;need to get back to a stable code base&lt;/strong&gt; is a daily scenario in the life of a developer. Indeed, it could happen more than once a day, if it was “one of those days”.&lt;/p&gt;
+&lt;p&gt;So there is Git. Well, yes but no. Of course Git is one of the most powerful tools at your disposal but it is not the easiest one. You should invest the time of learning Git as version control and collaboration tool, but for now let’s keep things simple. Dead simple.&lt;/p&gt;
+&lt;p&gt;The most efficient way to enable a &lt;em&gt;restore-ability&lt;/em&gt; for your code base is to &lt;strong&gt;create a copy of the project before you start&lt;/strong&gt; a development session. On a Mac is just a matter of right clicking the project’s folder and choose “duplicate”. Dead simple.&lt;/p&gt;
+&lt;p&gt;What is simple often works well, so let’s analyze what you do to revert your code. You trash the current project’s folder and rename the copy to match the original one. Dead simple and impressively quick.&lt;/p&gt;
+&lt;p&gt;Now you can improve your backup strategy by &lt;strong&gt;adding versioning support&lt;/strong&gt;. You are going to keep a copy for each stable version of your code base. Right-click on your project’s folder and choose “compress archive”. This option is available with a slightly different name on different platforms but you have it for sure. &lt;/p&gt;
+&lt;p&gt;Every time you create a new archive the OS will &lt;strong&gt;automatically append a version number&lt;/strong&gt; to it. You don’t have to bother and you can access your backup’s date &amp;#x26; time informations on the archive’s details panel. If you want to go even further my suggestion for you is to rename the archive, prefixing it with the current time in a “YYMMDDHHMM” format. Now the version number contains the time of the backups and &lt;strong&gt;all your archives are alphabetically sorted&lt;/strong&gt; on your file manager view.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/schedule-backups.jpg&quot; alt=&quot;schedule-backups&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Of course there is a price to pay for this simplicity. It’s space. You are going to need a lot of space if you version your project often. Luckily external drives are cheap nowadays and even cloud storage is not that expensive.&lt;/p&gt;
+&lt;p&gt;You can create your versions into your Dropbox folder so they are cloud stored right away and when you reach home at the end of the day you move the old ones to your gigantic external drive for a permanent storage.&lt;/p&gt;
+&lt;p&gt;So what about automation? Well so far we considered only manual backup and versioning strategies that you can trigger very quickly, but of course &lt;strong&gt;you want to schedule your backups&lt;/strong&gt; to run under the hood.&lt;/p&gt;
+&lt;p&gt;The easiest possible solution is Mac’s &lt;em&gt;Time Machine&lt;/em&gt; which will backup all your computer every hour by default. You can trigger a manual backup by choosing “backup now” on the incon tray’s menu. Some advantages are: a computer wide backup, the restore helper UI and the native support which is shipped within every Mac. The main drawback is that you need to live with your gigantic external drive always plugged in. And if you are not a Mac user then there is no drawback, there is a problem. TimeMachine is available only for Mac, but I am sure there are likewise solutions for both Windows and Linux. (If you know one please post it as a comment and I will integrate it.)&lt;/p&gt;
+&lt;p&gt;Another great backup tool is &lt;a href=&quot;https://bombich.com/&quot;&gt;&lt;em&gt;Carbon Copy Cloner&lt;/em&gt;&lt;/a&gt;, another Mac tool. &lt;strong&gt;&lt;em&gt;CCC&lt;/em&gt; creates a bootable clone of your machine&lt;/strong&gt; and you can schedule this backup the way you like it. I use &lt;em&gt;CCC&lt;/em&gt; as disaster recovery strategy. I clone my Mac at least once a week so if I loose it, someone steal it or my dog plays with it, I can buy a new one and clone it back. &lt;strong&gt;In few hours I can be back on track even in a disastrous scenario&lt;/strong&gt;. This is also a good strategy when I simply upgrade my computer to a new one. It’s almost 8 years I’ve been doing this and I never have a problem with it.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/external-drive.jpg&quot; alt=&quot;external-drive&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;For you that want to play a little bit with some scripting my suggestion is
+to buy a cheap hosting service which provides an FTP access. With this tool and
+some bash code you may be able to automate the archive &amp;#x26; versioning of your projects
+adding also a remote upload feature.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;In fact &lt;strong&gt;to backup on an external drive is far from enough to secure your data&lt;/strong&gt;. External drives are getting cheaper and cheaper and that means that they are also more prone to failure. Will you be happy to pay hundreds of dollars to extract your photo archive from a ruined disk? I bet you won’t!&lt;/p&gt;
+&lt;p&gt;The trick, again, is as easy as redounding your backups on more than one drive. &lt;/p&gt;
+&lt;p&gt;I keep my &lt;em&gt;Carbon Copy Cloner&lt;/em&gt; disk at home and the &lt;em&gt;TimeMachine&lt;/em&gt; one at the office. &lt;strong&gt;I backup my important files in two drives that are geographically as far away from each other&lt;/strong&gt;. My data will survive me coding drunk, a robbery, a fire and even an heartquake! With this strategy in place I do sleep tight.&lt;/p&gt;
+&lt;h3&gt;Remember the Takeaway:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;think simple&lt;/li&gt;
+&lt;li&gt;make a copy of your project before you start coding&lt;/li&gt;
+&lt;li&gt;use cloud tools like &lt;a href=&quot;https://www.dropbox.com/&quot;&gt;Dropbox&lt;/a&gt; or &lt;a href=&quot;https://www.google.com/drive/&quot;&gt;Google Drive&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;spread your backups to more disks, give one disk to your mom&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Sleep tight and live a happy Life!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[You'd better Test to save some Rest]]></title><description><![CDATA[Since the day I became a developer, I've always feared the 'Big What The Fuck'. ]]></description><link>https://alialfredji.github.io/2015/youd-better-test-to-save-some-rest</link><guid isPermaLink="false">https://alialfredji.github.io/2015/youd-better-test-to-save-some-rest</guid><pubDate>Thu, 15 Jan 2015 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;Since the day I became a developer, I’ve always feared the &lt;em&gt;Big What The Fuck&lt;/em&gt;. &lt;/p&gt;
+&lt;p&gt;The &lt;em&gt;BWTF&lt;/em&gt; is not only related to the code you write, it is the lack of knowledge that threatens to crush your entire project. It can be as simple as a server misconfiguration that causes a gaping security flaw.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/dude-wtf.jpg&quot; alt=&quot;dude-wtf&quot;&gt;&lt;/p&gt;
+&lt;p&gt;When the &lt;em&gt;BWTF&lt;/em&gt; strike, there is nowhere to go; there is no place to hide. The &lt;em&gt;BWTF&lt;/em&gt; is like the worst earthquake in the world: no building endures. A big part of your application, job and/or reputation goes to waste. And nobody wants this to happen.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;How can you protect yourself from the &lt;em&gt;Big What The Fuck&lt;/em&gt;?&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Well, the first step is to accept that this risk exists. The next step is to conceive a strategy to mitigate that risk. After more than 10 years striving to avoid the &lt;em&gt;BWTF&lt;/em&gt; I am now quite sure there is no way to remove that risk from your life. It is part of your life.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The best strategy to mitigate the risk of a &lt;em&gt;Big What The Fuck&lt;/em&gt; is &lt;strong&gt;Testing&lt;/strong&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;I am not constraining the discussion to the source code. You should consider testing to be a strategy for a better life, with or without code. A strategy that you can use to fight the &lt;em&gt;BWTF&lt;/em&gt;. Which is always lurking behind every corner, always present.&lt;/p&gt;
+&lt;p&gt;Say you plan to go holiday to the Red Sea, let’s try to work out a test to stress that decision:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;will I relax enough?&lt;/li&gt;
+&lt;li&gt;will I cope with 6 days without my Mac?&lt;/li&gt;
+&lt;li&gt;will it be safe?&lt;/li&gt;
+&lt;li&gt;will I gain 4 pounds by eating all the time?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You do the same activity when coding a procedure that takes 2 integers and return the sum:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;is &lt;code class=&quot;language-text&quot;&gt;sum(1, 1)&lt;/code&gt; equal to &lt;code class=&quot;language-text&quot;&gt;2&lt;/code&gt;?&lt;/li&gt;
+&lt;li&gt;does &lt;code class=&quot;language-text&quot;&gt;sum(&amp;#39;a&amp;#39;, 2)&lt;/code&gt; throw an exception?&lt;/li&gt;
+&lt;li&gt;is &lt;code class=&quot;language-text&quot;&gt;sum(&amp;#39;a&amp;#39;, 2)&lt;/code&gt; exception a &lt;code class=&quot;language-text&quot;&gt;wrongInputType&lt;/code&gt; exception?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The more tests that you are able to produce against a decision / procedure, the bigger
+chance you have to find early issues, with less of a risk of a &lt;em&gt;Big What The Fuck&lt;/em&gt;
+in the future.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;When it comes to a code scenario the most likely &lt;em&gt;BWTF&lt;/em&gt; is to forget to consider a minor requirement from the customer. Then you deliver a product that will fail in the future when that minor requirement will manifest. Your phone will ring like crazy, your inbox will choke and you’ll move abroad to escape your shame.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The &lt;em&gt;BWTF&lt;/em&gt; is due to the unpredictability of when the problem will arise. &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;/media/unpredictability.jpg&quot; alt=&quot;unpredictability&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The later it shows up, the less you’ll recall what the minor requirement was and where the problem lies within the code base. And how the hell it works! By the time an issue like that manifests itself, you may have moved to another technology.&lt;/p&gt;
+&lt;p&gt;In real life a &lt;em&gt;Big What The Fuck&lt;/em&gt; can be even worse. Almost four years ago I bought a brand new house and I took a loan for it. Less than two years later I moved to Sweden to join a challenging job opportunity. To this date I still haven’t sold that house, but I’m still paying the mortgage. Of course this is not a life threatening issue, but I can assure you it is annoying to throw away money like that. What if I had prepared myself with a more accurate test when I decided to buy the house? &lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;are my career opportunities well developed close to the house?&lt;/li&gt;
+&lt;li&gt;does my career ask me to be flexible about my location?&lt;/li&gt;
+&lt;li&gt;will it be possible to sell the house without losing big money on it?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Well, I must confess that I didn’t create any of those tests at the time of the buying.&lt;/p&gt;
+&lt;p&gt;As you can see by yourself there is no known ways to completely remove the risk of a &lt;em&gt;Big What The Fuck&lt;/em&gt;. The right way to behave is to mitigate that risk by running every decision / procedure against a &lt;em&gt;good amount of tests&lt;/em&gt;. What the word &lt;em&gt;good&lt;/em&gt; means in this context is up to you, but in general the more the tests the less the risk. &lt;/p&gt;
+&lt;p&gt;Another important point is that you can build you tests through time; it is always the right moment to add a new test. This is easier within a coding scenario. You may have missed a minor requirement but as soon you recognise it you can add a specific test to secure that requirement.&lt;/p&gt;
+&lt;p&gt;My test suite for real life scenarios is &lt;em&gt;practical common sense&lt;/em&gt; but when it comes to a code scenario I can give some more specific pieces of advice which are specific to &lt;em&gt;Javascript&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/common-sense.jpg&quot; alt=&quot;common-sense&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://karma-runner.github.io/0.12/index.html&quot;&gt;KarmaJS&lt;/a&gt; is a &lt;a href=&quot;nodejs.org&quot;&gt;NodeJS&lt;/a&gt; command line tool which runs your unit tests. Among its features I should mention that you can run tests on multiple target browsers. You can test mobile devices connected to the same network. I use KarmaJS in combination with &lt;a href=&quot;http://gruntjs.com/&quot;&gt;GruntJS&lt;/a&gt; or &lt;a href=&quot;http://gulpjs.com/&quot;&gt;GulpJS&lt;/a&gt; to integrate tests into my building processes.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://mochajs.org/&quot;&gt;MochaJS&lt;/a&gt; is a Javascript test framework which helps in creating your specs files. It provides utility methods for a nice code organization of your unit tests.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://chaijs.com/&quot;&gt;ChaiJS&lt;/a&gt; is an &lt;em&gt;assertion library&lt;/em&gt; that works great with Mocha. It allows you to write &lt;code class=&quot;language-text&quot;&gt;expect(foo).to.be.a.string&lt;/code&gt; so your assertions comes close to a natural language.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://sinonjs.org/&quot;&gt;SinonJS&lt;/a&gt; is a &lt;em&gt;mocking library&lt;/em&gt; which provides a set of tools to investigate your code. Does this method fire twice? Did it receive a string argument? You can go further and completely mimic an &lt;em&gt;XHR request&lt;/em&gt;.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I maintain a simple &lt;em&gt;&lt;a href=&quot;npmjs.org&quot;&gt;NPM module&lt;/a&gt;&lt;/em&gt; which combines the above tools to provide
+you with a ready to use test suite for Javascript:
+&lt;a href=&quot;https://www.npmjs.com/package/grunt-mocha-chai-sinon&quot;&gt;grunt-mocha-chai-sinon&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;For a more sophisticated tool that brings a building process for &lt;em&gt;single page applications&lt;/em&gt;
+give a try to &lt;a href=&quot;https://github.com/PoliteJS/workspace&quot;&gt;PoliteJS/Workspace&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.webdriver.io/&quot;&gt;WebDriver&lt;/a&gt; is a NodeJS bridge to &lt;a href=&quot;http://www.seleniumhq.org/&quot;&gt;Selenium&lt;/a&gt; functional testing suite. You can build your &lt;em&gt;FAT&lt;/em&gt; in Javascript driving a browsing session with full access to Selenium’s API.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://dalekjs.com/&quot;&gt;DalekJS&lt;/a&gt; is a standalone alternative to &lt;em&gt;WebDriver&lt;/em&gt;. Even if it is on an early stage it looks very promising.&lt;/p&gt;
+&lt;h3&gt;So remember your Takeaway:&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;the &lt;em&gt;Big What The Fuck&lt;/em&gt; is always lurking and there is no way to avoid it&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;testing is the best strategy&lt;/strong&gt; you have to mitigate the risk of a &lt;em&gt;BWTF&lt;/em&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;you can apply testing to your professional and private life&lt;/p&gt;
+&lt;!-- /Markdown --&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;img src=&quot;/media/succeed.jpg&quot; alt=&quot;succeed&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[The Curse of the Proud Developer]]></title><link>https://alialfredji.github.io/2015/the-curse-of-the-proud-developer</link><guid isPermaLink="false">https://alialfredji.github.io/2015/the-curse-of-the-proud-developer</guid><pubDate>Tue, 13 Jan 2015 06:21:37 GMT</pubDate><content:encoded>&lt;p&gt;The sky was turning dark when I saw the first &lt;em&gt;Internal Server Error&lt;/em&gt; (code 500). It was 5PM in the winter’s afternoon and we were close to the release deadline. My heart missed at least two beats while my mouse ran to the reload button: “It may be just a network error, I thought”. But it wasn’t.&lt;/p&gt;
+&lt;p&gt;That day I was working on an important server side piece of code but now nothing was working anymore. No error messages, no logs. Nothing but a &lt;em&gt;code 505&lt;/em&gt;. I went into panic.&lt;/p&gt;
+&lt;p&gt;Around me everyone was packing up to go home and I thought I could not bother them with an error I made on my own code. I was ashamed: “What they’ll think of me? I will loose my credibility as good developer for sure”. That was my fear and the room seemed to close down all around me. I was choking!&lt;/p&gt;
+&lt;p&gt;It was the &lt;em&gt;Curse of the Proud Developer&lt;/em&gt; kicking in after a long day of coding.&lt;/p&gt;
+&lt;p&gt;So I started to debug my code from scratch. After going through generic checkpoints, I changed my strategy. I moved to a simple but effective line by line comment and test mode. A damn long and frustrating process. The code went blurry before my eyes.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/media/panic.jpg&quot; alt=&quot;panic&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I remember I was almost sweating under the office lights, my sight narrowed down on my keyboard. I was trying to ignore all the happy people around me, hoping for a miracle to happen. And then the miracle did happen.&lt;/p&gt;
+&lt;p&gt;“We are going to Paddy’s, will you join us?” It was Johan asking me out to the local pub where we hang out with the team every Friday night. “Ehm, I’m kinda stuck with a damn bug, can’t join right now”, my voice was trembling so much I felt ashamed.&lt;/p&gt;
+&lt;p&gt;Johan came to my desk and we got into in a pair programming session to fix the bug. In a few minutes Vladimir and Maximilian also joined us as well. It was the whole team working together to solve a late &lt;em&gt;WTF&lt;/em&gt; before going to the pub to celebrate the past week!&lt;/p&gt;
+&lt;p&gt;In the end we found the problem and today nobody recall who was to thank for the bug fix, it was a real team work, and it was successful. We really deserved that beer!&lt;/p&gt;
+&lt;p&gt;Since that &lt;em&gt;Black Friday&lt;/em&gt; I faced many other &lt;em&gt;WTF&lt;/em&gt; moments but I’ve never wasted another minute trying to get out of it on my own. What a relief, I neither panic, nor choke anymore.&lt;/p&gt;
+&lt;p&gt;My team is here to help me as I’m here to help them and this is how we overcame the &lt;em&gt;Curse of the Proud Developer&lt;/em&gt;!&lt;/p&gt;
+&lt;h2&gt;Remember your Takeaway:&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;seek for help among your mates&lt;/li&gt;
+&lt;li&gt;a team play wins over the lonely wolf&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item></channel></rss>

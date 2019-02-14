@@ -1,0 +1,175 @@
+## Created with gatsby-plugin-netlify
+
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 1; mode=block
+  X-Content-Type-Options: nosniff
+/static/*
+  Cache-Control: public, max-age=31536000, immutable
+/sw.js
+  Cache-Control: no-cache
+/offline-plugin-app-shell-fallback/
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </component---node-modules-gatsby-plugin-offline-app-shell-js-93e968e729fa3c90b6f7.js>; rel=preload; as=script
+/404
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tags
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/categories
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2015/the-curse-of-the-proud-developer
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/pages/about/
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2015/sleep-tight-and-have-an-happy-life
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/pages/contacts/
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2017/apple-security-travellers-sucks
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2015/youd-better-test-to-save-some-rest
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2017/docker-stats-containers-names
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2015/the-holy-grail-of-code-sharing
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2016/dockerized-mysql-crashes-lot
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2016/junior-developer
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2018/best-practices-for-good-team-experience
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2017/wp-admin-proxy-nginx
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2017/wordpress-nginx-cache
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2018/optional-parameter-aws-cloudformation-stack-yaml
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2019/gatsby-begins
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2018/react-styleguidist-with-react-scripts-rewired
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2017/optimize-select-count-postgres
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/2018/make-it-parallel
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/backups
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/blogging
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/coding
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/containers
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/content-ownership
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/count
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/cra
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/crash
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/development
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/docker
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/hacks
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/indexes
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/memory
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/monitor
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/mysql
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/nginx
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/optimization
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/parallel
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/performances
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/postgres
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/proxy
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/queue
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/react
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/stats
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/team
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/testing
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/trick
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/tricks
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/tag/wordpress
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/category/blog
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/category/blog/page/1
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
+/page/1
+  Link: </webpack-runtime-4da7f586998a1f5ed6e8.js>; rel=preload; as=script
+  Link: </0-5495c36a5388a40a52e9.js>; rel=preload; as=script
