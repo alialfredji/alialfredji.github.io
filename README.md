@@ -1,2 +1,2 @@
 
-[alfredji.com](alfredji.com)
+[alfredji.com](https://alfredji.com)
