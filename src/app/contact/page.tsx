@@ -10,7 +10,7 @@ export default function ContactPage() {
       <div className="space-y-8">
         {/* Introduction */}
         <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-          I&apos;m always open to discussing new opportunities, collaborations, or just having a friendly chat about technology, sports, business development and software engineering.
+          I&apos;m always open to discussing new opportunities, collaborations, or just having a friendly chat about technology, business and sports.
         </p>
 
         {/* Contact Options */}

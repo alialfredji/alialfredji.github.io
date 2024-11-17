@@ -39,8 +39,8 @@ export default function Home() {
         <h2 className="text-xl font-semibold">Selected Work</h2>
         <ul className="space-y-4 text-gray-600 dark:text-gray-300">
           <li>
-            <a href="https://mysocial.io" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white">
-              Mysocial → <span className="text-gray-500">Social media platform with 100k+ users</span>
+          <a href="https://mysocial.io" target="_blank" rel="noopener noreferrer" className="hover:text-black dark:hover:text-white">
+              Mysocial → <span className="text-gray-500">AI powered influencer manager used by 100k+ users</span>
             </a>
           </li>
           <li>
