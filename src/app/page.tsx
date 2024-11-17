@@ -14,7 +14,7 @@ export default function Home() {
       <section className="mb-16 space-y-6">
         <h1 className="text-3xl font-bold">Ali Alfredji</h1>
         <p className="text-lg text-gray-600 dark:text-gray-300">
-          Engineering leader with close to a decade of experience, focused on building scalable systems and high-performing teams. Outside work, I&apos;m an avid sports fan with a love for football and creative endeavors.
+          Engineering leader with close to a decade of experience, focused on building scalable systems and high-performing teams. Outside work, I&apos;m an avid sports fan with a love for football and creative endeavors. hej
         </p>
         
         {/* Social Links - Updated with react-icons */}
