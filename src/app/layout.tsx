@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import { GoogleTagManager } from '@next/third-parties/google'
+
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import "./globals.css";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,6 +37,7 @@ export default function RootLayout({
         <link rel="icon" href="/favi/favicon.ico" />
         <link rel="manifest" href="/favi/site.webmanifest" />
       </head>
+      <GoogleTagManager gtmId="G-FL0GSW92BR" />
       <body className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
