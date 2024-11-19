@@ -1,5 +1,5 @@
 ---
-title: "Take Control of Your Energy: A Step-by-Step Guide for Increased Productivity"
+title: "Take control of your energy: A step-by-step guide for increased productivity"
 date: "2024-11-11"
 description: "Learn effective energy management techniques to boost productivity. This step-by-step guide provides practical strategies to optimize your energy levels and achieve your goals."
 slug: "2024-11-11-take-control-of-your-energy"

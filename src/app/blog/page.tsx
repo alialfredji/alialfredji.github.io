@@ -16,7 +16,7 @@ export default function BlogPage() {
               <h2 className="text-xl font-bold group-hover:text-gray-600 transition-colors">
                 {post.title}
               </h2>
-              <p className="text-gray-700 leading-relaxed dark:text-gray-400">{post.description}</p>
+              {post.description && <p className="text-gray-700 leading-relaxed dark:text-gray-400">{post.description}</p>}
               <div className="text-sm text-gray-500">
                 {format(new Date(post.date), 'MMMM dd, yyyy')} • {post.readingTime}
               </div>

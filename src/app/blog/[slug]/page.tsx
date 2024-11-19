@@ -25,7 +25,7 @@ export default function BlogPost({ params }: { params: { slug: string } }) {
     <article className="max-w-[44rem] mx-auto px-4 py-12">
       <header className="mb-8">
         <h1 className="text-3xl font-bold leading-tight mb-4">{post.title}</h1>
-        <p className="text-gray-400 text-base pb-4">{post.description}</p>
+        {post.description && <p className="text-gray-400 text-base pb-4">{post.description}</p>}
         <div className="text-gray-500 text-sm">
           {format(new Date(post.date), 'MMMM dd, yyyy')} • {post.readingTime}
         </div>
