@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { GoogleTagManager } from '@next/third-parties/google'
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/header";
@@ -37,7 +37,6 @@ export default function RootLayout({
         <link rel="icon" href="/favi/favicon.ico" />
         <link rel="manifest" href="/favi/site.webmanifest" />
       </head>
-      <GoogleTagManager gtmId="G-FL0GSW92BR" />
       <body className={`${geistSans.variable} ${geistMono.variable} flex min-h-screen flex-col`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
@@ -47,6 +46,7 @@ export default function RootLayout({
           <Footer />
         </ThemeProvider>
       </body>
+      <GoogleAnalytics gaId="G-FL0GSW92BR" />
     </html>
   );
 }
