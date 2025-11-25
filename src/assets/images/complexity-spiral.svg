@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#F8F9FA"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" font-family="Patrick Hand" font-size="28" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+    Overengineering vs. Simplicity
+  </text>
+  
+  <!-- Left Side: Complexity -->
+  <g id="complexity">    
+    <!-- Tangled path -->
+    <path d="M 150 150 Q 180 180 160 220 Q 140 260 180 280 Q 220 300 190 340 Q 160 380 200 400 Q 240 420 210 460" 
+          stroke="#EF4444" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M 160 160 Q 140 200 170 240 Q 200 280 170 320 Q 140 360 180 390 Q 220 420 200 450" 
+          stroke="#EF4444" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M 180 170 Q 220 200 200 240 Q 180 280 210 310 Q 240 340 220 380 Q 200 420 220 450" 
+          stroke="#EF4444" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+    
+    <!-- Start and End markers -->
+    <circle cx="165" cy="150" r="8" fill="#EF4444"/>
+    <text x="165" y="130" font-family="Patrick Hand" font-size="14" font-weight="600" text-anchor="middle" fill="#1a1a1a">Start</text>
+    
+    <circle cx="210" cy="460" r="8" fill="#EF4444"/>
+    <text x="210" y="485" font-family="Patrick Hand" font-size="14" font-weight="600" text-anchor="middle" fill="#1a1a1a">Launch?</text>
+    
+    <!-- Labels along the path -->
+    <text x="240" y="200" font-family="Patrick Hand" font-size="12" fill="#9CA3AF">Abstractions</text>
+    <text x="100" y="280" font-family="Patrick Hand" font-size="12" fill="#9CA3AF">Refactoring</text>
+    <text x="250" y="340" font-family="Patrick Hand" font-size="12" fill="#9CA3AF">"Future-proof"</text>
+    <text x="100" y="420" font-family="Patrick Hand" font-size="12" fill="#9CA3AF">More features</text>
+  </g>
+  
+  <!-- Right Side: Simplicity -->
+  <g id="simplicity">    
+    <!-- Straight path with iterations -->
+    <line x1="600" y1="150" x2="600" y2="460" stroke="#10B981" stroke-width="4" stroke-linecap="round"/>
+    
+    <!-- Circles along the path representing iterations (equal spacing) -->
+    <circle cx="600" cy="150" r="8" fill="#10B981"/>
+    <circle cx="600" cy="202" r="8" fill="#10B981"/>
+    <circle cx="600" cy="254" r="8" fill="#10B981"/>
+    <circle cx="600" cy="306" r="8" fill="#10B981"/>
+    <circle cx="600" cy="358" r="8" fill="#10B981"/>
+    <circle cx="600" cy="410" r="8" fill="#10B981"/>
+    <circle cx="600" cy="460" r="10" fill="#10B981"/>
+    
+    <!-- Labels - alternating left and right for clarity -->
+    <text x="580" y="155" font-family="Patrick Hand" font-size="14" font-weight="600" text-anchor="end" fill="#1a1a1a">Start</text>
+    <text x="530" y="207" font-family="Patrick Hand" font-size="14" font-weight="600" text-anchor="start" fill="#1a1a1a">Launch v1</text>
+    <text x="665" y="259" font-family="Patrick Hand" font-size="14" font-weight="600" text-anchor="end" fill="#1a1a1a">Feedback</text>
+    <text x="545" y="311" font-family="Patrick Hand" font-size="14" font-weight="600" text-anchor="start" fill="#1a1a1a">Iterate</text>
+    <text x="580" y="363" font-family="Patrick Hand" font-size="14" font-weight="600" text-anchor="end" fill="#1a1a1a">Launch v2</text>
+    <text x="620" y="415" font-family="Patrick Hand" font-size="14" font-weight="600" text-anchor="start" fill="#1a1a1a">Feedback</text>
+    <text x="600" y="490" font-family="Patrick Hand" font-size="14" font-weight="600" text-anchor="middle" fill="#1a1a1a">Launch v3</text>
+  </g>
+  
+  <!-- Divider -->
+  <line x1="400" y1="120" x2="400" y2="520" stroke="#E5E7EB" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Bottom message -->
+  <text x="400" y="560" font-family="Patrick Hand" font-size="16" font-style="italic" text-anchor="middle" fill="#6B7280">
+    Overengineering traps you in endless loops, simplicity delivers value faster.
+  </text>
+</svg>

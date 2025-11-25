@@ -1,0 +1,89 @@
+---
+import { SHARE_LINKS } from "@/constants";
+import LinkButton from "./LinkButton.astro";
+
+const URL = Astro.url;
+const pageTitle = Astro.props.title || "Check out this post";
+---
+
+{
+  SHARE_LINKS.length > 0 && (
+    <div class="flex flex-none flex-col items-center justify-center gap-1 md:items-start">
+      <span class="italic">Share this post on:</span>
+      <div class="text-center" id="share-links-container">
+        {SHARE_LINKS.map(social =>
+          social.isNativeShare ? (
+            <button
+              type="button"
+              class="group inline-block scale-90 p-2 hover:rotate-6 hover:text-accent sm:p-1"
+              data-native-share="true"
+              data-url={URL}
+              data-title={pageTitle}
+              title={social.linkTitle}
+              aria-label={social.linkTitle}
+            >
+              <social.icon class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" />
+              <span class="sr-only">{social.linkTitle}</span>
+            </button>
+          ) : (
+            <LinkButton
+              href={`${social.href + URL}`}
+              class="scale-90 p-2 hover:rotate-6 sm:p-1"
+              title={social.linkTitle}
+            >
+              <social.icon class="inline-block size-6 scale-125 fill-transparent stroke-current stroke-2 opacity-90 group-hover:fill-transparent sm:scale-110" />
+              <span class="sr-only">{social.linkTitle}</span>
+            </LinkButton>
+          )
+        )}
+      </div>
+    </div>
+  )
+}
+
+<script>
+  function initNativeShare(): void {
+    const shareButtons = document.querySelectorAll<HTMLButtonElement>(
+      '[data-native-share="true"]'
+    );
+
+    shareButtons.forEach(button => {
+      if (!navigator.share) {
+        button.style.display = "none";
+        return;
+      }
+
+      button.addEventListener("click", async () => {
+        const url = button.dataset.url || window.location.href;
+        const title = button.dataset.title || document.title;
+
+        try {
+          await navigator.share({
+            title,
+            url,
+          });
+        } catch (err) {
+          // Silently handle errors except AbortError (user cancelled)
+          if (err instanceof Error && err.name !== "AbortError") {
+            // Error occurred during share - could be logged to error tracking service
+          }
+        }
+      });
+    });
+  }
+
+  initNativeShare();
+
+  document.addEventListener("astro:page-load", () => {
+    initNativeShare();
+  });
+</script>
+
+<style>
+  button[data-native-share] {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+</style>
