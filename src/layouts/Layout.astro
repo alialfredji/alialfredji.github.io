@@ -1,6 +1,9 @@
 ---
 import { ClientRouter } from "astro:transitions";
-import { PUBLIC_GOOGLE_SITE_VERIFICATION } from "astro:env/client";
+import {
+  PUBLIC_GOOGLE_SITE_VERIFICATION,
+  PUBLIC_GOOGLE_ANALYTICS_ID,
+} from "astro:env/client";
 import { SITE } from "@/config";
 import "@/styles/global.css";
 
@@ -117,14 +120,51 @@ const structuredData = {
     <meta name="theme-color" content="" />
 
     {
-      // If PUBLIC_GOOGLE_SITE_VERIFICATION is set in the environment variable,
-      // include google-site-verification tag in the heading
+      // Google Search Console Site Verification
+      // Verifies ownership of your website in Google Search Console
+      // Steps to get your verification code:
+      // 1. Go to https://search.google.com/search-console
+      // 2. Add your property (URL prefix)
+      // 3. Choose "HTML tag" verification method
+      // 4. Copy the content value from the meta tag
+      // 5. Set PUBLIC_GOOGLE_SITE_VERIFICATION in your .env file
+      // 6. Deploy and verify in Search Console
       // Learn more: https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag
       PUBLIC_GOOGLE_SITE_VERIFICATION && (
         <meta
           name="google-site-verification"
           content={PUBLIC_GOOGLE_SITE_VERIFICATION}
         />
+      )
+    }
+
+    {
+      // Google Analytics 4 (GA4) integration
+      // Learn more: https://developers.google.com/analytics/devguides/collection/ga4
+      PUBLIC_GOOGLE_ANALYTICS_ID && (
+        <>
+          <script
+            async
+            src={`https://www.googletagmanager.com/gtag/js?id=${PUBLIC_GOOGLE_ANALYTICS_ID}`}
+          />
+          <script
+            is:inline
+            set:html={`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${PUBLIC_GOOGLE_ANALYTICS_ID}');
+              
+              // Track page view on client-side navigation (Astro transitions)
+              document.addEventListener('astro:page-load', () => {
+                gtag('config', '${PUBLIC_GOOGLE_ANALYTICS_ID}', {
+                  page_path: window.location.pathname + window.location.search,
+                  page_title: document.title,
+                });
+              });
+            `}
+          />
+        </>
       )
     }
 

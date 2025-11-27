@@ -37,6 +37,9 @@ jobs:
         run: npm ci
 
       - name: "🚀 Build the project"
+        env:
+          PUBLIC_GOOGLE_SITE_VERIFICATION: ${{ secrets.PUBLIC_GOOGLE_SITE_VERIFICATION }}
+          PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.PUBLIC_GOOGLE_ANALYTICS_ID }}
         run: npm run build
 
       - name: "📤 Upload artifact"
